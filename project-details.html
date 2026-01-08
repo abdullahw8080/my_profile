@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المشروع - عبدالله الشريف</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Global Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="nav-back">
+        <a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+    </div>
+
+    <div class="container project-container">
+        <!-- Main Slider -->
+        <div class="swiper gallery-top">
+            <div class="swiper-wrapper" id="project-gallery-top">
+                <!-- Data injected via JS -->
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <!-- Thumbs Slider -->
+        <div class="swiper gallery-thumbs">
+            <div class="swiper-wrapper" id="project-gallery-thumbs">
+                <!-- Data injected via JS -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <div class="content">
+            <div class="tags" id="project-tags"></div>
+
+            <div class="project-header-row"
+                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h1 id="project-title" style="margin: 0;">اسم المشروع</h1>
+                <a href="#" id="project-github" target="_blank" class="btn-github">
+                    <i class="fab fa-github"></i> رابط المشروع
+                </a>
+            </div>
+
+            <p class="description" id="project-description">وصف مفصل للمشروع...</p>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <h4>العميل</h4>
+                    <p id="project-client">اسم العميل</p>
+                </div>
+                <div class="detail-item">
+                    <h4>التاريخ</h4>
+                    <p id="project-date">يناير 2024</p>
+                </div>
+                <div class="detail-item">
+                    <h4>التقنيات</h4>
+                    <p id="project-stack">HTML, CSS, JS</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close-lightbox">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const projectData = {
+            1: {
+                title: "نظام إدارة الموارد (ERP)",
+                description: "هذا المشروع هو عبارة عن نظام متكامل لإدارة الموارد المؤسسية، تم بناؤه باستخدام Laravel و Oracle. يهدف النظام إلى أتمتة كافة العمليات الداخلية للشركات، بدءاً من إدارة الموارد البشرية وشؤون الموظفين، وصولاً إلى التقارير المالية المتطورة ولوحات التحكم اللحظية. يتميز النظام بواجهة مستخدم سهلة وبديهية تدعم اللغة العربية بشكل كامل، مع نظام تشفير بيانات متقدم لضمان الأمان.",
+                tags: ["Web", "Laravel", "Oracle"],
+                client: "شركة التقنية المتقدمة",
+                date: "أكتوبر 2023",
+                stack: "PHP, Laravel, SQL Server, Chart.js",
+                github: "https://github.com/Start-Abdullah",
+                images: [
+                    "image of projects\\صور متجر سلة الخير\\1.png"
+                ]
+            },
+            2: {
+                title: "تطبيق متجر إلكتروني",
+                description: "تطبيق موبايل متكامل للتجارة الإلكترونية مبني باستخدام تقنية Flutter. يوفر التطبيق تجربة تسوق فريدة للمستخدم تتيح له تصفح المنتجات، إضافتها إلى السلة، والدفع عبر بوابات دفع محلية ودولية. يتصل التطبيق بلوحة تحكم ويب لإدارة الطلبات والمخزون، ويدعم ميزات الإشعارات المباشرة وتتبع الطلبات عبر الخريطة.",
+                tags: ["Mobile", "Flutter", "Firebase"],
+                client: "متجر المنصور",
+                date: "ديسمبر 2023",
+                stack: "Dart, Flutter, Firebase Cloud Messaging",
+                github: "https://github.com/Start-Abdullah",
+                images: [
+                    "image of projects/صور متجر سلة الخير/1.png",
+                    "image of projects/صور متجر سلة الخير/2.png",
+                    "image of projects/صور متجر سلة الخير/3.png",
+                    "image of projects/صور متجر سلة الخير/4.png",
+                    "image of projects/صور متجر سلة الخير/5.png",
+                    "image of projects/صور متجر سلة الخير/6.png",
+                    "image of projects/صور متجر سلة الخير/7.png",
+                    "image of projects/صور متجر سلة الخير/8.png",
+                    "image of projects/صور متجر سلة الخير/9.png",
+                    "image of projects/صور متجر سلة الخير/10.png",
+                    "image of projects/صور متجر سلة الخير/11.png",
+                    "image of projects/صور متجر سلة الخير/12.png",
+                    "image of projects/صور متجر سلة الخير/13.png",
+                    "image of projects/صور متجر سلة الخير/14.png",
+                    "image of projects/صور متجر سلة الخير/15.png",
+                    "image of projects/صور متجر سلة الخير/16.png",
+                    "image of projects/صور متجر سلة الخير/17.png",
+                    "image of projects/صور متجر سلة الخير/18.png",
+                    "image of projects/صور متجر سلة الخير/19.png",
+                    "image of projects/صور متجر سلة الخير/20.png",
+                    "image of projects/صور متجر سلة الخير/21.png",
+
+                ]
+            },
+            3: {
+                title: "منصة تحليل البيانات",
+                description: "منصة متطورة لتحليل البيانات الضخمة تعتمد على تقنيات الذكاء الاصطناعي و Python. تقوم المنصة بسحب البيانات من مصادر متعددة ومعالجتها لتقديم تنبؤات دقيقة وتحليلات إحصائية تساعد أصحاب القرار على تحسين جودة العمل. تم استخدام تقنيات Power BI لتمثيل البيانات بشكل بصري جذاب واحترافي.",
+                tags: ["Data", "Python", "AI"],
+                client: "مركز الدراسات الإحصائية",
+                date: "مارس 2023",
+                stack: "Python, Pandas, Power BI, Scikit-learn",
+                github: "https://github.com/Start-Abdullah",
+                images: [
+                    "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=2070&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1543286386-713bdd54865e?q=80&w=2070&auto=format&fit=crop",
+                    "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=2070&auto=format&fit=crop"
+                ]
+            }
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const projectId = params.get('id') || 1;
+        const project = projectData[projectId];
+
+        if (project) {
+            document.getElementById('project-title').innerText = project.title;
+            document.getElementById('project-description').innerText = project.description;
+            document.getElementById('project-client').innerText = project.client;
+            document.getElementById('project-date').innerText = project.date;
+            document.getElementById('project-stack').innerText = project.stack;
+            document.getElementById('project-github').href = project.github;
+
+            const tagsPath = document.getElementById('project-tags');
+            project.tags.forEach(t => {
+                const span = document.createElement('span');
+                span.className = 'tag';
+                span.innerText = t;
+                tagsPath.appendChild(span);
+            });
+
+            const galleryTop = document.getElementById('project-gallery-top');
+            const galleryThumbs = document.getElementById('project-gallery-thumbs');
+
+            project.images.forEach(img => {
+                // Main Slide
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.innerHTML = `<img src="${img}" alt="Project Image" onclick="openLightbox(this.src)">`;
+                galleryTop.appendChild(slide);
+
+                // Thumb Slide
+                const thumb = document.createElement('div');
+                thumb.className = 'swiper-slide';
+                thumb.innerHTML = `<img src="${img}" alt="Thumb">`;
+                galleryThumbs.appendChild(thumb);
+            });
+
+            // Function to update hidden images indicator
+            function updateHiddenImagesIndicator() {
+                const totalImages = project.images.length;
+                let slidesPerView = 6; // Default desktop
+
+                // Check breakpoints manualy to match Swiper config
+                if (window.innerWidth < 640) {
+                    slidesPerView = 4;
+                } else if (window.innerWidth < 1024) {
+                    slidesPerView = 5;
+                }
+
+                // Remove existing overlays
+                document.querySelectorAll('.more-images-overlay').forEach(el => el.remove());
+
+                if (totalImages > slidesPerView) {
+                    const hiddenCount = totalImages - slidesPerView;
+                    // The last visible slide index is slidesPerView - 1
+                    // But in Swiper loop mode, it's tricky.
+                    // However, we are adding this to the THUMBS swiper which is usually NOT loop or simple.
+                    // Let's target the Nth slide of the thumbs gallery.
+
+                    const thumbSlides = galleryThumbs.querySelectorAll('.swiper-slide');
+                    if (thumbSlides[slidesPerView - 1]) {
+                        const overlay = document.createElement('div');
+                        overlay.className = 'more-images-overlay';
+                        overlay.innerText = '+' + hiddenCount;
+                        thumbSlides[slidesPerView - 1].appendChild(overlay);
+                    }
+                }
+            }
+
+            // Initialize Thumbs Swiper
+            var swiperThumbs = new Swiper(".gallery-thumbs", {
+                spaceBetween: 10,
+                slidesPerView: 6, // Increased to make thumbnails smaller
+                freeMode: true,
+                watchSlidesProgress: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "fraction",
+                },
+                breakpoints: {
+                    // responsive breakpoints
+                    320: {
+                        slidesPerView: 4,
+                        spaceBetween: 5
+                    },
+                    640: {
+                        slidesPerView: 5,
+                        spaceBetween: 8
+                    },
+                    1024: {
+                        slidesPerView: 6,
+                        spaceBetween: 10
+                    }
+                },
+                on: {
+                    init: function () {
+                        setTimeout(updateHiddenImagesIndicator, 100);
+                    },
+                    resize: function () {
+                        setTimeout(updateHiddenImagesIndicator, 100);
+                    }
+                }
+            });
+
+            // Initialize Main Swiper linked to Thumbs
+            var swiperTop = new Swiper(".gallery-top", {
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                thumbs: {
+                    swiper: swiperThumbs,
+                },
+                autoplay: { delay: 3000 },
+                loop: true
+            });
+        }
+
+        // Lightbox Functions
+        const modal = document.getElementById("lightbox-modal");
+        const modalImg = document.getElementById("lightbox-img");
+        const closeBtn = document.getElementsByClassName("close-lightbox")[0];
+
+        function openLightbox(src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
