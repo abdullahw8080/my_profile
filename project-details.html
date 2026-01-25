@@ -78,23 +78,103 @@
     <script>
         const projectData = {
             1: {
-                title: "نظام إدارة الموارد (ERP)",
-                description: "هذا المشروع هو عبارة عن نظام متكامل لإدارة الموارد المؤسسية، تم بناؤه باستخدام Laravel و Oracle. يهدف النظام إلى أتمتة كافة العمليات الداخلية للشركات، بدءاً من إدارة الموارد البشرية وشؤون الموظفين، وصولاً إلى التقارير المالية المتطورة ولوحات التحكم اللحظية. يتميز النظام بواجهة مستخدم سهلة وبديهية تدعم اللغة العربية بشكل كامل، مع نظام تشفير بيانات متقدم لضمان الأمان.",
-                tags: ["Web", "Laravel", "Oracle"],
-                client: "شركة التقنية المتقدمة",
-                date: "أكتوبر 2023",
-                stack: "PHP, Laravel, SQL Server, Chart.js",
-                github: "https://github.com/Start-Abdullah",
+                title: "بناء نموذج تعلم آلي للتنبؤ بقبول أو رفض طلبات القروض",
+                description: `يهدف هذا المشروع إلى بناء نموذج تعلم آلي للتنبؤ بقبول أو رفض طلبات القروض اعتمادًا على بيانات العملاء المالية والشخصية، باستخدام خوارزمية K-Nearest Neighbors (KNN).
+
+
+يعالج المشروع بيانات شبه حقيقية تحتوي على معلومات مثل:
+
+الدخل السنوي  
+عدد المعالين  
+المستوى التعليمي  
+حالة العمل الحر  
+مبلغ القرض ومدة القرض  
+التقييم الائتماني (CIBIL Score)  
+قيم الأصول (سكنية، تجارية، فاخرة، بنكية)
+
+⚙️ خطوات العمل (Workflow)
+
+استكشاف البيانات (EDA)  
+عرض شكل البيانات، وأنواع الأعمدة، والإحصائيات الوصفية  
+التأكد من عدم وجود قيم مفقودة  
+
+تنظيف البيانات ومعالجتها  
+حذف الأعمدة غير المفيدة مثل loan_id  
+توحيد القيم النصية (Education, Self Employed, Loan Status)  
+تحويل القيم النصية إلى رقمية باستخدام LabelEncoder  
+
+تقسيم البيانات  
+تقسيم البيانات إلى بيانات تدريب واختبار بنسبة 70% / 30%  
+
+تقييس البيانات (Standardization)  
+استخدام StandardScaler لتحسين أداء خوارزمية KNN  
+
+اختيار أفضل قيمة لـ K  
+تجربة قيم مختلفة لـ K من 1 إلى 39  
+حساب معدل الخطأ لكل قيمة  
+اختيار القيمة التي تحقق أقل معدل خطأ (Error Rate)
+
+تدريب النموذج وتقييمه  
+تدريب نموذج KNN باستخدام أفضل قيمة لـ K  
+تقييم الأداء باستخدام:
+
+Accuracy  
+Precision  
+Recall  
+F1-score  
+Confusion Matrix  
+
+التنبؤ بحالة طلب قرض جديد  
+إدخال بيانات عميل جديد  
+التنبؤ بما إذا كان القرض مقبولًا أو مرفوضًا  
+
+📊 النتائج (Results)
+✅ أفضل قيمة لـ K = 31  
+🎯 دقة النموذج (Accuracy): ~90%  
+📈 أداء قوي في التنبؤ بحالات القبول والرفض مع توازن جيد بين:  
+Precision  
+Recall  
+F1-score  
+
+🔍 تقرير التصنيف (Classification Report):
+Approved  
+Precision: 0.93  
+Recall: 0.91  
+F1-score: 0.92  
+
+Rejected  
+Precision: 0.86  
+Recall: 0.88  
+F1-score: 0.87  
+
+🧩 مصفوفة الالتباس (Confusion Matrix):
+
+نجح النموذج في تقليل الأخطاء من نوع:  
+رفض طلب مستحق  
+أو قبول طلب غير مؤهل`,
+                tags: ["Machine Learning", "Python", "KNN"],
+                date: "مايو 2025",
+                stack: "Python, Scikit-learn, Pandas, NumPy",
+                github: "https://github.com/abdullahw8080/Loan-Approval-Prediction-Using-K-Nearest-Neighbors-KNN-",
                 images: [
-                    "image of projects\\صور متجر سلة الخير\\1.png"
+                    "image of projects\\صور مشروع التنبؤ بالقروض\\1.png",
+                    "image of projects\\صور مشروع التنبؤ بالقروض\\2.png",
+                    "image of projects\\صور مشروع التنبؤ بالقروض\\3.png",
+                    "image of projects\\صور مشروع التنبؤ بالقروض\\4.png",
+                    "image of projects\\صور مشروع التنبؤ بالقروض\\5.png",
+                    "image of projects\\صور مشروع التنبؤ بالقروض\\6.png",
+                    "image of projects\\صور مشروع التنبؤ بالقروض\\7.png",
+                    "image of projects\\صور مشروع التنبؤ بالقروض\\8.png",
+
                 ]
             },
+
             2: {
-                
+
                 title: "متجر إلكتروني",
                 description: "سلة الخير هو متجر إلكتروني متكامل ومتخصص في بيع المواد الغذائية، يوفّر واجهة استخدام سهلة وبسيطة تُمكّن المستخدم من التسوق وتصفح المنتجات حسب الأقسام وإضافة المنتجات إلى سلة التسوق بكل سهولة. يتيح المتجر خيارات دفع متعددة تشمل الدفع النقدي (كاش) أو عبر البطاقة الإلكترونية. بعد إتمام الطلب، يتم إرساله مباشرة إلى مدير المتجر الذي يقوم باستلامه ومعالجته وإرساله للتنفيذ. كما يوفر النظام تقارير تفصيلية لمدير المتجر تشمل إدارة المخزون، والمنتجات الأكثر مبيعًا، وبيانات العملاء، والمناطق الأكثر شراءً، مما يساعد على تحسين الأداء واتخاذ قرارات فعّالة."
-,
-                tags: ["Html", "CSS", "JS" ,"PHP" , "MySQL"],
+                ,
+                tags: ["Html", "CSS", "JS", "PHP", "MySQL"],
                 client: "سوبر ماركة سلة الخير",
                 date: "مارس 2024",
                 stack: "Html, CSS, JS ,PHP , MySQL",
@@ -126,18 +206,132 @@
             },
             3: {
                 title: "متجر إلكتروني",
-                description: "",
-                tags: ["Data", "Python", "AI"],
-                client: "سوبر ماركة سلة الخير",
-                date: "مارس 2024",
-                stack: "Html, CSS, JS ,PHP , MySQL",
-                github: "https://github.com/Start-Abdullah",
+                description: `يهدف هذا المشروع إلى تحليل بيانات متجر إلكتروني من خلال تصميم لوحات معلومات تفاعلية باستخدام Power BI، تركّز على المبيعات، الطلبات، المنتجات، وسلوك العملاء لدعم اتخاذ القرار وتحليل الأداء التجاري.
+يعتمد المشروع على بيانات منظّمة قادمة من مستودع بيانات (Data Warehouse)، وتم تحويلها إلى تقارير مرئية سهلة الفهم وقابلة للتصفية والتحليل.
+
+🔍 أهم التحليلات المعروضة
+🛒 الطلبات (Orders)
+إجمالي الطلبات
+الطلبات المكتملة، الملغاة، المرتجعة، وقيد المعالجة
+تحليل الطلبات حسب:
+المدينة
+العميل
+الزمن (سنة / شهر)
+مقارنة عدد الطلبات مع الهدف (Target)
+💰 المبيعات (Sales)
+إجمالي المبيعات
+المبيعات حسب:
+الفئة (Category)
+المنتج
+المدينة
+تحليل هامش الربح (Profit Margin)
+📦 المنتجات (Products)
+عدد المنتجات حسب الفئة
+أعلى المنتجات من حيث عدد الطلبات والمبيعات
+العلاقة بين:
+متوسط سعر المنتج
+إجمالي المبيعات
+الكمية المباعة
+
+👥 العملاء (Customers)
+إجمالي عدد العملاء
+عدد العملاء المشترين
+متوسط إنفاق العميل
+الإنفاق حسب:
+العميل
+المدينة
+الجنس
+تحليل سلوك المستخدم (View, Cart, Wishlist, Purchase)
+
+🎯 أهداف المشروع
+فهم أداء المتجر الإلكتروني
+تحليل سلوك العملاء وتحسين تجربة الشراء
+دعم القرارات التسويقية والتجارية
+تقديم رؤى واضحة عبر لوحات تفاعلية
+
+📌 هذا المشروع يبرز مهاراتي في:
+Power BI – Data Visualization – Business Intelligence – Data Analysis – Dashboard Design`,
+                tags: ["Data", "Python", "Power BI"],
+                client: "متجر سلة الخير ",
+                date: "يناير 2026",
+                stack: "Python , Power BI , DAX Measures , Data Modeling , Interactive Filters & Slicers , Star Schema",
+                github: "https://github.com/abdullahw8080/ecommerce_dashboard_analysis-using-power-bi",
                 images: [
-                    "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1543286386-713bdd54865e?q=80&w=2070&auto=format&fit=crop",
-                    "https://images.unsplash.com/photo-1551288049-bbbda536339a?q=80&w=2070&auto=format&fit=crop"
+                    "image of projects\\E-Commerce Power BI Dashboard Image\\1.png",
+                    "image of projects\\E-Commerce Power BI Dashboard Image\\2.png",
+                    "image of projects\\E-Commerce Power BI Dashboard Image\\3.png",
+
                 ]
-            }
+            },
+            4: {
+
+                title: "E-Commerce Data Warehouse (Sales, Orders & Customer Behavior)",
+                description: `يهدف هذا المشروع إلى تصميم وبناء مستودع بيانات (Data Warehouse) لمتجر إلكتروني، يركّز على تحليل المبيعات، الطلبات، وسلوك العملاء لدعم اتخاذ القرار وتحليل الأداء التجاري.
+تم بناء المستودع باتباع منهجية ETL وباستخدام أدوات مايكروسوفت الخاصة بعالم البيانات.
+
+🧱 بنية مستودع البيانات
+تم تصميم المستودع باستخدام Star Schema ويتكوّن من:
+
+🔹 جداول الأبعاد (Dimensions):
+DimDate
+DimUser
+DimProduct
+DimOrderStatus
+DimEventType
+
+🔹 جداول الحقائق (Facts):
+FactSales
+FactOrders
+FactUserBehavior
+
+بالإضافة إلى منطقة التخزين المؤقت (Staging Area) التي تحتوي على جداول:
+stg_users
+stg_products
+stg_orders
+stg_order_items
+stg_events
+
+⚙️ الأدوات والتقنيات المستخدمة
+SQL Server: تخزين وبناء مستودع البيانات
+SSIS (SQL Server Integration Services):
+استيراد البيانات من ملفات CSV
+تحميل البيانات إلى Staging Area
+تنظيف البيانات (إزالة التكرار، تحويل الأنواع، حساب الحقول)
+تحميل البيانات النهائية إلى Data Warehouse
+Power BI:
+تحليل البيانات
+بناء التقارير ولوحات المعلومات (Dashboards)
+
+🔄 آلية العمل (Workflow)
+استيراد البيانات من ملفات CSV
+تحميل البيانات إلى Staging Area باستخدام SSIS
+تنظيف وتحويل البيانات (Data Cleaning & Transformation)
+تحميل البيانات إلى Data Warehouse
+
+📊 مخرجات المشروع
+تحليل المبيعات والأرباح
+تتبع الطلبات وحالاتها
+تحليل سلوك العملاء والتفاعل
+دعم اتخاذ القرار عبر تقارير مرئية تفاعلية
+
+📌 هذا المشروع يبرز مهاراتي في:
+Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
+
+                tags: ["SSIS", "SQL Server", "Data Modeling", "CSV", "ETL"],
+                client: "سوبر ماركة سلة الخير",
+                date: "2026 يناير",
+                stack: "Data Warehousing , ETL , SSIS , SQL Server , Data Modeling , Power BI",
+                github: "https://github.com/abdullahw8080/E-Commerce-Data-Warehouse-Project",
+                images: [
+                    "image of projects\\Data Warehouse Projct Images\\1.png",
+                    "image of projects\\Data Warehouse Projct Images\\2.png",
+                    "image of projects\\Data Warehouse Projct Images\\3.png",
+                     "image of projects\\E-Commerce Power BI Dashboard Image\\1.png",
+                    "image of projects\\E-Commerce Power BI Dashboard Image\\2.png",
+                    "image of projects\\E-Commerce Power BI Dashboard Image\\3.png",
+
+                ]
+            },
         };
 
         const params = new URLSearchParams(window.location.search);
