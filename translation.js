@@ -23,7 +23,6 @@ const translationMap = {
     "أنا": "I am",
     "تواصل معي": "Contact Me",
     "تحميل السيرة الذاتية": "Download CV",
-    "مطور ويب ومحلل بيانات شغوف، أمتلك خبرة في بناء تطبيقات ويب حديثة وتحويل البيانات إلى رؤى قابلة للتنفيذ. أهدف دائمًا لتقديم حلول مبتكرة وعالية الجودة.": "A passionate web developer and data analyst, I possess experience in building modern web applications and transforming data into actionable insights. I always aim to deliver innovative and high-quality solutions.",
     "هندسة برمجيات ومحلل بيانات شغوف، أمتلك خبرة في بناء تطبيقات ويب حديثة وتحويل البيانات إلى رؤى قابلة للتنفيذ. أهدف دائمًا لتقديم حلول مبتكرة وعالية الجودة.": "A passionate software engineer and data analyst, I possess experience in building modern web applications and transforming data into actionable insights. I always aim to deliver innovative and high-quality solutions.",
 
     // Education
