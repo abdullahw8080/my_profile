@@ -835,6 +835,11 @@ li {
     box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
 }
 
+[dir="ltr"] .btn-back i {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
 .btn-github {
     display: inline-flex;
     align-items: center;
@@ -902,7 +907,8 @@ li {
 .swiper-slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.1);
     filter: brightness(0.9);
 }
 

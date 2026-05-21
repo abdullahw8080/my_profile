@@ -16,9 +16,13 @@
 </head>
 
 <body>
-    <div class="nav-back">
+    <div class="nav-back" style="display: flex; align-items: center; justify-content: space-between;">
         <a href="index.html" class="btn-back"><i class="fas fa-arrow-right"></i> العودة للرئيسية</a>
+        <button onclick="doGTranslate()" id="langToggleBtn" class="btn-back" style="cursor: pointer; padding: 12px 25px;">EN</button>
     </div>
+
+    <!-- Offline Translation Script -->
+    <script src="translation.js"></script>
 
     <div class="container project-container">
         <!-- Main Slider -->
@@ -77,17 +81,38 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const projectData = {
-
-            //====================================================================================>>
-            //------------------------------------------------------------------------------------>>
-            //====================================================================================>>
             1: {
+                titleEn: 'Machine Learning Model for Loan Approval Prediction',
+                descriptionEn: `This project aims to build a machine learning model using the K-Nearest Neighbors (KNN) algorithm to predict whether loan applications should be approved or rejected based on customer financial and personal data.
+
+The project processes semi-realistic data containing information such as:
+- Annual Income
+- Number of Dependents
+- Education Level
+- Self-employment status
+- Loan amount and term
+- Credit rating (CIBIL Score)
+- Asset values (residential, commercial, luxury, bank)
+
+⚙️ Workflow
+1. Exploratory Data Analysis (EDA): Displaying data shape, column types, descriptive statistics, and ensuring no missing values.
+2. Data Cleaning and Preprocessing: Removing useless columns like loan_id, unifying text values, and converting them to numeric using LabelEncoder.
+3. Data Splitting: Splitting data into 70% training and 30% testing.
+4. Standardization: Using StandardScaler to improve KNN performance.
+5. Finding optimal K value: Trying different K values from 1 to 39, calculating error rate, and choosing the K with the lowest error.
+6. Model Training and Evaluation: Training KNN with the best K and evaluating using Accuracy, Precision, Recall, F1-score, and Confusion Matrix.
+7. Prediction: Inputting new customer data to predict loan status.
+
+📊 Results
+✅ Optimal K value = 31
+🎯 Model Accuracy: ~90%
+📈 Strong performance with good balance between Precision, Recall, and F1-score.`,
+                clientEn: 'Self Project',
+                stackEn: 'Python, Scikit-learn, Pandas, NumPy',
                 title: "بناء نموذج تعلم آلي للتنبؤ بقبول أو رفض طلبات القروض",
                 description: `يهدف هذا المشروع إلى بناء نموذج تعلم آلي للتنبؤ بقبول أو رفض طلبات القروض اعتمادًا على بيانات العملاء المالية والشخصية، باستخدام خوارزمية K-Nearest Neighbors (KNN).
 
-
 يعالج المشروع بيانات شبه حقيقية تحتوي على معلومات مثل:
-
 الدخل السنوي  
 عدد المعالين  
 المستوى التعليمي  
@@ -97,7 +122,6 @@
 قيم الأصول (سكنية، تجارية، فاخرة، بنكية)
 
 ⚙️ خطوات العمل (Workflow)
-
 استكشاف البيانات (EDA)  
 عرض شكل البيانات، وأنواع الأعمدة، والإحصائيات الوصفية  
 التأكد من عدم وجود قيم مفقودة  
@@ -121,7 +145,6 @@
 تدريب النموذج وتقييمه  
 تدريب نموذج KNN باستخدام أفضل قيمة لـ K  
 تقييم الأداء باستخدام:
-
 Accuracy  
 Precision  
 Recall  
@@ -152,35 +175,32 @@ Recall: 0.88
 F1-score: 0.87  
 
 🧩 مصفوفة الالتباس (Confusion Matrix):
-
 نجح النموذج في تقليل الأخطاء من نوع:  
 رفض طلب مستحق  
 أو قبول طلب غير مؤهل`,
                 tags: ["Machine Learning", "Python", "KNN"],
+                client: "مشروع خاص",
                 date: "مايو 2025",
                 stack: "Python, Scikit-learn, Pandas, NumPy",
                 github: "https://github.com/abdullahw8080/Loan-Approval-Prediction-Using-K-Nearest-Neighbors-KNN-",
                 images: [
-                    "image of projects\\صور مشروع التنبؤ بالقروض\\1.png",
-                    "image of projects\\صور مشروع التنبؤ بالقروض\\2.png",
-                    "image of projects\\صور مشروع التنبؤ بالقروض\\3.png",
-                    "image of projects\\صور مشروع التنبؤ بالقروض\\4.png",
-                    "image of projects\\صور مشروع التنبؤ بالقروض\\5.png",
-                    "image of projects\\صور مشروع التنبؤ بالقروض\\6.png",
-                    "image of projects\\صور مشروع التنبؤ بالقروض\\7.png",
-                    "image of projects\\صور مشروع التنبؤ بالقروض\\8.png",
-
+                    "image of projects/صور مشروع التنبؤ بالقروض/1.png",
+                    "image of projects/صور مشروع التنبؤ بالقروض/2.png",
+                    "image of projects/صور مشروع التنبؤ بالقروض/3.png",
+                    "image of projects/صور مشروع التنبؤ بالقروض/4.png",
+                    "image of projects/صور مشروع التنبؤ بالقروض/5.png",
+                    "image of projects/صور مشروع التنبؤ بالقروض/6.png",
+                    "image of projects/صور مشروع التنبؤ بالقروض/7.png",
+                    "image of projects/صور مشروع التنبؤ بالقروض/8.png"
                 ]
             },
-            //====================================================================================>>
-            //------------------------------------------------------------------------------------>>
-            //====================================================================================>>
-
             2: {
-
-                title: "متجر إلكتروني",
-                description: "سلة الخير هو متجر إلكتروني متكامل ومتخصص في بيع المواد الغذائية، يوفّر واجهة استخدام سهلة وبسيطة تُمكّن المستخدم من التسوق وتصفح المنتجات حسب الأقسام وإضافة المنتجات إلى سلة التسوق بكل سهولة. يتيح المتجر خيارات دفع متعددة تشمل الدفع النقدي (كاش) أو عبر البطاقة الإلكترونية. بعد إتمام الطلب، يتم إرساله مباشرة إلى مدير المتجر الذي يقوم باستلامه ومعالجته وإرساله للتنفيذ. كما يوفر النظام تقارير تفصيلية لمدير المتجر تشمل إدارة المخزون، والمنتجات الأكثر مبيعًا، وبيانات العملاء، والمناطق الأكثر شراءً، مما يساعد على تحسين الأداء واتخاذ قرارات فعّالة."
-                ,
+                titleEn: 'E-Commerce Website (Salet Alkhair)',
+                descriptionEn: `Salet Alkhair is a comprehensive e-commerce platform specializing in grocery sales, featuring a user-friendly interface for browsing categories, managing shopping cart, and checking out. It supports cash on delivery and card payments, and notifies the administrator upon order completion. It also provides reports on inventory, best sellers, and customer demographics to help make efficient business decisions.`,
+                clientEn: 'Salet Alkhair Supermarket',
+                stackEn: 'Html, CSS, JS, PHP, MySQL',
+                title: "موقع لمتجر إلكتروني (سلة الخير)",
+                description: `سلة الخير هو متجر إلكتروني متكامل ومتخصص في بيع المواد الغذائية، يوفّر واجهة استخدام سهلة وبسيطة تُمكّن المستخدم من التسوق وتصفح المنتجات حسب الأقسام وإضافة المنتجات إلى سلة التسوق بكل سهولة. يتيح المتجر خيارات دفع متعددة تشمل الدفع النقدي (كاش) أو عبر البطاقة الإلكترونية. بعد إتمام الطلب، يتم إرساله مباشرة إلى مدير المتجر الذي يقوم باستلامه ومعالجته وإرساله للتنفيذ. كما يوفر النظام تقارير تفصيلية لمدير المتجر تشمل إدارة المخزون، والمنتجات الأكثر مبيعًا، وبيانات العملاء، والمناطق الأكثر شراءً، مما يساعد على تحسين الأداء واتخاذ قرارات فعّالة.`,
                 tags: ["Html", "CSS", "JS", "PHP", "MySQL"],
                 client: "سوبر ماركة سلة الخير",
                 date: "مارس 2024",
@@ -207,15 +227,27 @@ F1-score: 0.87
                     "image of projects/صور متجر سلة الخير/18.png",
                     "image of projects/صور متجر سلة الخير/19.png",
                     "image of projects/صور متجر سلة الخير/20.png",
-                    "image of projects/صور متجر سلة الخير/21.png",
-
+                    "image of projects/صور متجر سلة الخير/21.png"
                 ]
             },
-            //====================================================================================>>
-            //------------------------------------------------------------------------------------>>
-            //====================================================================================>>
             3: {
-                title: "متجر إلكتروني",
+                titleEn: 'E-Commerce Data Analysis Dashboard',
+                descriptionEn: `This project analyzes e-commerce data through interactive Power BI dashboards, focusing on sales, orders, products, and customer behavior to support business decision-making. Data is extracted from a custom data warehouse and converted into visual charts.
+
+🔍 Key Metrics & Dashboards
+🛒 Orders Analysis: Total orders, status breakdown (completed, cancelled, returned), ordering trends by city, customer, and time.
+💰 Sales Analysis: Total sales, profit margins, categories, products, and cities performance.
+📦 Products Analysis: Categorization, top-selling items, relationship between price, sales, and quantity.
+👥 Customers Analysis: Customer count, average spending, demographics, and user behavior funnel (View, Cart, Wishlist, Purchase).
+
+🎯 Project Goals
+- Understand e-commerce performance
+- Analyze customer behavior and improve purchase experience
+- Support marketing and commercial decisions
+- Present clear insights through interactive dashboards`,
+                clientEn: 'Salet Alkhair Supermarket',
+                stackEn: 'Python, Power BI, DAX Measures, Data Modeling',
+                title: "تحليل بيانات متجر إلكتروني",
                 description: `يهدف هذا المشروع إلى تحليل بيانات متجر إلكتروني من خلال تصميم لوحات معلومات تفاعلية باستخدام Power BI، تركّز على المبيعات، الطلبات، المنتجات، وسلوك العملاء لدعم اتخاذ القرار وتحليل الأداء التجاري.
 يعتمد المشروع على بيانات منظّمة قادمة من مستودع بيانات (Data Warehouse)، وتم تحويلها إلى تقارير مرئية سهلة الفهم وقابلة للتصفية والتحليل.
 
@@ -228,6 +260,7 @@ F1-score: 0.87
 العميل
 الزمن (سنة / شهر)
 مقارنة عدد الطلبات مع الهدف (Target)
+
 💰 المبيعات (Sales)
 إجمالي المبيعات
 المبيعات حسب:
@@ -235,6 +268,7 @@ F1-score: 0.87
 المنتج
 المدينة
 تحليل هامش الربح (Profit Margin)
+
 📦 المنتجات (Products)
 عدد المنتجات حسب الفئة
 أعلى المنتجات من حيث عدد الطلبات والمبيعات
@@ -267,32 +301,41 @@ Power BI – Data Visualization – Business Intelligence – Data Analysis – 
                 stack: "Python , Power BI , DAX Measures , Data Modeling , Interactive Filters & Slicers , Star Schema",
                 github: "https://github.com/abdullahw8080/ecommerce_dashboard_analysis-using-power-bi",
                 images: [
-                    "image of projects\\E-Commerce Power BI Dashboard Image\\1.png",
-                    "image of projects\\E-Commerce Power BI Dashboard Image\\2.png",
-                    "image of projects\\E-Commerce Power BI Dashboard Image\\3.png",
-
+                    "image of projects/E-Commerce Power BI Dashboard Image/1.png",
+                    "image of projects/E-Commerce Power BI Dashboard Image/2.png",
+                    "image of projects/E-Commerce Power BI Dashboard Image/3.png"
                 ]
             },
-            //====================================================================================>>
-            //------------------------------------------------------------------------------------>>
-            //====================================================================================>>
             4: {
+                titleEn: 'E-Commerce Data Warehouse (ETL & Modeling)',
+                descriptionEn: `Designed and built an e-commerce data warehouse using Star Schema and ETL methodologies. Used SQL Server for warehousing, SSIS for data cleaning, transformation, and loading (ETL) from CSV files, and Power BI for reporting.
 
-                title: "E-Commerce Data Warehouse (Sales, Orders & Customer Behavior)",
+🧱 Data Warehouse Architecture
+DimDate, DimUser, DimProduct, DimOrderStatus, DimEventType
+FactSales, FactOrders, FactUserBehavior
+stg_users, stg_products, stg_orders, stg_order_items, stg_events
+
+⚙️ Tools & Technologies
+- SQL Server: Storing and building the data warehouse
+- SSIS: CSV data importing, Staging Area loading, Data cleaning & transformation, DWH loading
+- Power BI: Data modeling and dashboard creation`,
+                clientEn: 'Salet Alkhair Supermarket',
+                stackEn: 'Data Warehousing, ETL, SSIS, SQL Server, Data Modeling',
+                title: "مستودع بيانات (Data Warehouse) لمتجر إلكتروني",
                 description: `يهدف هذا المشروع إلى تصميم وبناء مستودع بيانات (Data Warehouse) لمتجر إلكتروني، يركّز على تحليل المبيعات، الطلبات، وسلوك العملاء لدعم اتخاذ القرار وتحليل الأداء التجاري.
 تم بناء المستودع باتباع منهجية ETL وباستخدام أدوات مايكروسوفت الخاصة بعالم البيانات.
 
 🧱 بنية مستودع البيانات
 تم تصميم المستودع باستخدام Star Schema ويتكوّن من:
 
-🔹 جداول الأبعاد (Dimensions):
+جداول الأبعاد (Dimensions):
 DimDate
 DimUser
 DimProduct
 DimOrderStatus
 DimEventType
 
-🔹 جداول الحقائق (Facts):
+جداول الحقائق (Facts):
 FactSales
 FactOrders
 FactUserBehavior
@@ -329,28 +372,37 @@ Power BI:
 
 📌 هذا المشروع يبرز مهاراتي في:
 Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
-
                 tags: ["SSIS", "SQL Server", "Data Modeling", "CSV", "ETL"],
                 client: "سوبر ماركة سلة الخير",
                 date: "2026 يناير",
                 stack: "Data Warehousing , ETL , SSIS , SQL Server , Data Modeling , Power BI",
                 github: "https://github.com/abdullahw8080/E-Commerce-Data-Warehouse-Project",
                 images: [
-                    "image of projects\\Data Warehouse Projct Images\\1.png",
-                    "image of projects\\Data Warehouse Projct Images\\2.png",
-                    "image of projects\\Data Warehouse Projct Images\\3.png",
-                    "image of projects\\E-Commerce Power BI Dashboard Image\\1.png",
-                    "image of projects\\E-Commerce Power BI Dashboard Image\\2.png",
-                    "image of projects\\E-Commerce Power BI Dashboard Image\\3.png",
-
+                    "image of projects/Data Warehouse Projct Images/1.png",
+                    "image of projects/Data Warehouse Projct Images/2.png",
+                    "image of projects/Data Warehouse Projct Images/3.png",
+                    "image of projects/E-Commerce Power BI Dashboard Image/1.png",
+                    "image of projects/E-Commerce Power BI Dashboard Image/2.png",
+                    "image of projects/E-Commerce Power BI Dashboard Image/3.png"
                 ]
             },
-            //====================================================================================>>
-            //------------------------------------------------------------------------------------>>
-            //====================================================================================>>
-
             5: {
-                title: "تحديد المواقع المثلى للمراكز الصحية باستخدام الذكاء الاصطناعي",
+                titleEn: 'AI-Powered Optimal Site Selection for Health Centers',
+                descriptionEn: `This project aims to determine the best locations for establishing health centers in Ma'ain district, Sana'a, using the K-means clustering algorithm and GIS. It addresses spatial distribution imbalance and reduces travel time to medical facilities.
+
+🏥 The Problem
+The distribution of health services in Ma'ain suffers from imbalance, leaving northern and western regions with a shortage. This forces residents to travel long distances to central hospitals.
+
+🧠 Methodology
+Using AI-supported K-means clustering to analyze population density, geographic distance, and existing health facilities.
+
+📍 Proposed Sites
+1st Site: Al-Siniyah Area (High priority) - providing services to low-income populations.
+2nd Site: Asr Area (West) - establishing a specialized emergency center.
+3rd Site: Al-Nahdah and Mathbah (North) - matching urban expansion and offering labs/X-ray services.`,
+                clientEn: "Ma'ain District, Sana'a",
+                stackEn: 'Data Analysis, AI, K-means, GIS, Power BI',
+                title: "تحديد المواقع المثلى للمراكز الصحية بالذكاء الاصطناعي",
                 description: `يهدف هذا المشروع إلى تحديد أفضل المواقع لإنشاء مراكز صحية في مديرية معين بأمانة العاصمة صنعاء، باستخدام خوارزمية K-means والذكاء الاصطناعي، لمعالجة الاختلال في توزيع الخدمات الصحية وتقليل زمن الوصول للخدمة الطبية.
 
 🏥 مشكلة المشروع
@@ -363,13 +415,13 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
 - توزيع المنشآت الطبية القائمة
 
 📍 المواقع المقترحة حسب الأولوية
-🔹 الموقع الأول: منطقة السينية (الأولوية القصوى)
+الموقع الأول: منطقة السينية (الأولوية القصوى)
 توفير الرعاية الطبية لأكبر كتلة سكانية ذات دخل محدود وتقليل وفيات الحالات الطارئة.
 
-🔹 الموقع الثاني: مثلث منطقة عصر (غرب المديرية)
+الموقع الثاني: مثلث منطقة عصر (غرب المديرية)
 إنشاء مركز متخصص لطب الطوارئ وحوادث الطرق في مدخل صنعاء الغربي.
 
-🔹 الموقع الثالث: أطراف حي النهضة وشمال مذبح
+الموقع الثالث: أطراف حي النهضة وشمال مذبح
 مواكبة التوسع العمراني وتوفير خدمات الأشعة والمختبرات.
 
 ⚙️ الأدوات والتقنيات المستخدمة
@@ -385,7 +437,6 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
 
 📌 هذا المشروع يبرز مهاراتي في:
 تحليل البيانات – الذكاء الاصطناعي – التخطيط الحضري – العدالة في توزيع الخدمات – خوارزميات التجميع – نظم المعلومات الجغرافية`,
-
                 tags: ["K-means", "الذكاء الاصطناعي", "تحليل البيانات", "QGIS", "التخطيط الصحي"],
                 client: "مديرية معين - أمانة العاصمة صنعاء",
                 date: "2026 يناير",
@@ -394,16 +445,20 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
                 images: [
                     "image of projects/GIS_health_servces_project/health servces.png",
                     "image of projects/GIS_health_servces_project/المناطق الحرجة.png",
-                    "image of projects/GIS_health_servces_project/Proposed_Health_Site.png",
-
+                    "image of projects/GIS_health_servces_project/Proposed_Health_Site.png"
                 ]
             },
-
-            //====================================================================================>>
-            //------------------------------------------------------------------------------------>>
-            //====================================================================================>>
-
             6: {
+                titleEn: 'Taif E-Store - Smartphone Sales Platform',
+                descriptionEn: `Developed a responsive e-commerce web application for selling smartphones, featuring role authorization (admin/customer), product management, advanced filtering, and automated WhatsApp order messages.
+
+🛍️ Key Features
+- Role management: Admin (add/delete products) and Customer/Guest browsing.
+- Product inventory management with categories (Samsung, iPhone, Nokia, HP, Huawei).
+- Advanced search and filtering by brand, network, device state, and price.
+- Direct checkout through WhatsApp integration sending automated product details.`,
+                clientEn: 'Taif Store',
+                stackEn: 'HTML, CSS, JS, Glide APIs, Responsive Design',
                 title: "متجر طيف الإلكتروني - منصة بيع هواتف ذكية",
                 description: `يهدف مشروع "متجر طيف" إلى تطوير تطبيق ويب متكامل لبيع وعرض الهواتف الذكية عبر الإنترنت، بواجهة بسيطة وجذابة وسهلة الاستخدام تعمل على جميع الأجهزة (هواتف، أجهزة لوحية، حواسيب مكتبية) وجميع أنظمة التشغيل.
 
@@ -427,7 +482,7 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
 عند رغبة العميل بشراء منتج، يمكنه:
 - الضغط على زر "طلب عبر الواتساب"
 - يتم تحويله تلقائياً إلى صفحة المدير على الواتساب
-- إرسال رسالة تلقائية تحتوي على تفاصيل المنتج بالكامل
+- إرسسالة تلقائية تحتوي على تفاصيل المنتج بالكامل
 - خيار الطلب عبر رسالة نصية أو اتصال مباشر
 
 📋 تفاصيل المنتج
@@ -464,7 +519,6 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
 
 📌 هذا المشروع يبرز مهاراتي في:
 تطوير تطبيقات الويب – تصميم واجهات المستخدم – تجربة المستخدم (UX/UI) – إدارة قواعد البيانات – التكامل مع واتساب – تطبيقات التجارة الإلكترونية`,
-
                 tags: ["متجر إلكتروني", "هواتف ذكية", "UI/UX", "Responsive Design", "واتساب"],
                 client: "متجر طيف",
                 date: "2025 نوفمبر",
@@ -480,13 +534,23 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
                     "image of projects/صورة متجر طيف/7.png"
                 ]
             },
-
-
-            //====================================================================================>>
-            //------------------------------------------------------------------------------------>>
-            //====================================================================================>>
-
             7: {
+                titleEn: 'Household Supplies Sales Analysis & Forecasting System',
+                descriptionEn: `An End-to-End sales performance analysis of over 2600 transactions. Includes data extraction and cleaning via MySQL, visual analysis using Power BI, and time series forecasting (Holt-Winters) using Python for 2026 sales.
+
+📊 Data Overview
+Analyzed a huge database of over 2600 sales transactions (5247 items sold) with total revenue of 33.8 million EGP.
+
+🚀 Technical Highlights
+1. Data Extraction & Cleaning (SQL): Using MySQL to join tables, handle null values, and clean financial data.
+2. Visual Analysis (Power BI): Designing 6 interactive pages containing 20+ charts covering sales, branches, products, and employee performance.
+3. Smart Forecasting (Python): Developing a Holt-Winters statistical model to forecast sales volume for 2026.
+
+🔮 Future Predictions (2026)
+- Forecasted revenue of 17.4 million EGP by the end of 2026.
+- Quantifying demand for top-selling items to prevent inventory shortage.`,
+                clientEn: 'Household Supplies Company',
+                stackEn: 'SQL (MySQL), Power BI (DAX), Python (Pandas, Statsmodels), Time Series Forecasting',
                 title: "نظام تحليل وتنبؤ مبيعات المستلزمات المنزلية (2023-2026)",
                 description: `يهدف هذا المشروع إلى تقديم تحليل استراتيجي متكامل (End-to-End) لأداء مبيعات شركة مستلزمات منزلية، مع الربط بين البيانات التاريخية والذكاء الاصطناعي للتنبؤ بالاتجاهات المستقبلية.
 
@@ -520,7 +584,6 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
 
 📌 مهارات يبرزها المشروع:
 تحليل الأعمال (Business Analytics) – ذكاء الأعمال (BI) – علم البيانات (Data Science) – التنبؤ المالي – إدارة قواعد البيانات – اتخاذ القرارات القائمة على البيانات.`,
-
                 tags: ["تحليل بيانات", "Power BI", "Python AI", "SQL", "تنبؤ مبيعات"],
                 client: "شركة مستلزمات منزلية",
                 date: "2026 مارس",
@@ -535,15 +598,21 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
                     "image of projects/Household Appliances Sales Analysis images/6.png",
                     "image of projects/Household Appliances Sales Analysis images/7.png",
                     "image of projects/Household Appliances Sales Analysis images/8.png",
-                    "image of projects/Household Appliances Sales Analysis images/9.png",
+                    "image of projects/Household Appliances Sales Analysis images/9.png"
                 ]
             },
-
-            //====================================================================================>>
-            //------------------------------------------------------------------------------------>>
-            //====================================================================================>>
-
             8: {
+                titleEn: 'Advanced Hybrid Encryption System (CryptiPy)',
+                descriptionEn: `A secure desktop application for hybrid file encryption combining AES-256 for fast symmetric file encryption and RSA-2048 for secure key exchange, featuring a custom Tkinter GUI and data chunking support.
+
+🚀 Features
+1. Symmetric Encryption (AES-256 CBC): High-efficiency file encryption with PKCS7 padding.
+2. Asymmetric Encryption (RSA-2048): Securing key exchange using OAEP and SHA-256.
+3. Key Management: Key generation, export/import (.pem and .key).
+4. Data Chunking: Chunking larger files to bypass RSA size limits.
+5. GUI: User-friendly Tkinter GUI with bilingual support and live status bar.`,
+                clientEn: 'Academic Project / Security Tools',
+                stackEn: 'Python, Cryptography (AES, RSA, OAEP), Tkinter GUI, File I/O Management',
                 title: "نظام التشفير الهجين المتقدم (CryptiPy) - حماية الملفات بـ AES & RSA",
                 description: `مشروع أمني متكامل يهدف إلى توفير حلول تشفير احترافية للملفات والبيانات الحساسة باستخدام بنية هجينة تجمع بين السرعة والأمان الفائق.
 
@@ -557,7 +626,7 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
 3. إدارة المفاتيح (Key Management): نظام ذكي لتوليد وتصدير واستيراد المفاتيح الأمنية بصيغ معيارية مثل (.pem و .key)، مما يسهل إدارة دورة حياة التشفير.
 
 🔍 الابتكارات البرمجية في المشروع
-- تقنية تقسيم البيانات (Data Chunking): ابتكار حل برمجي لتجاوز قيود الحجم التقليدية في RSA، مما يسمح بتشفير ملفات أكبر عبر تقسيمها ومعالجتها في كتل (Chunks) مرتبة.
+- تقنية تقسيم البيانات (Data Chunking): ابتكار حل برمجي لتجاوز قيود الحجم التقليدية في RSA، مما يسمح بتشغيل ملفات أكبر عبر تقسيمها ومعالجتها في كتل (Chunks) مرتبة.
 - واجهة مستخدم رسومية (GUI): تطوير واجهة تفاعلية ومنظمة بتبويبات (Notebook) تدعم اللغة العربية والإنجليزية، مع توفير رسائل حالة فورية (Status Bar) لضمان تجربة مستخدم سلسة.
 - الأمان التشغيلي: ميزة الحذف الآمن للملفات الأصلية بعد التشفير لمنع تسريب البيانات، والتحقق من صحة المفاتيح قبل إجراء العمليات.
 
@@ -569,25 +638,86 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
 
 📌 مهارات يبرزها المشروع:
 الأمن السيبراني (Cybersecurity) – التشفير (Cryptography) – تطوير البرمجيات المكتبية – إدارة المفاتيح الأمنية – معالجة الملفات المتقدمة – حل المشكلات البرمجية المعقدة.`,
-
                 tags: ["تشفير", "الأمن السيبراني", "Python", "AES & RSA", "حماية البيانات"],
                 client: "مشروع أكاديمي / أدوات أمنية",
                 date: "2026 مارس",
                 stack: "Python, Cryptography (AES, RSA, OAEP), Tkinter GUI, File I/O Management",
-                github: "https://github.com/abdullahw8080/Advanced-File-Encryption-Suite-Project-", 
+                github: "https://github.com/abdullahw8080/Advanced-File-Encryption-Suite-Project-",
                 images: [
-                    "image of projects/Advanced File Encryption Project images/5.png", 
+                    "image of projects/Advanced File Encryption Project images/5.png",
                     "image of projects/Advanced File Encryption Project images/1.png",
                     "image of projects/Advanced File Encryption Project images/2.png",
                     "image of projects/Advanced File Encryption Project images/3.png",
-                    "image of projects/Advanced File Encryption Project images/4.png",
+                    "image of projects/Advanced File Encryption Project images/4.png"
+                ]
+            },
+            9: {
+                titleEn: 'Halls Booking Platform - Events & Services App',
+                descriptionEn: `A comprehensive platform connecting event venue providers (halls, hotels, chalets) with customers, featuring a subscription model and 4 different booking methods (Direct, WhatsApp, Phone, Chat).
+
+🔐 Roles & Authorization
+- Venue Owners: Manage halls, receive bookings, reply to reviews.
+- System Admin: Manage platform, review new halls, track reports.
+- Customers: Browse, filter, book, and manage events.
+- Service Providers: Manage services (photography, security, catering).
+
+📞 Booking Methods (4 ways)
+1. Direct in-app booking with push notifications.
+2. WhatsApp booking (auto-filled details).
+3. Direct phone calls.
+4. Internal chat system.`,
+                clientEn: 'Self Project',
+                stackEn: 'Flutter, Firebase, REST API',
+                title: "منصة قاعات - التطبيق المتكامل لحجز المناسبات والخدمات",
+                description: `منصة شاملة تربط بين مقدمي خدمات المناسبات (قاعات، فنادق، شاليهات) والعملاء، مع نظام باقات اشتراك مرن وأربع طرق حجز مختلفة.
+
+📋 نظرة عامة
+مناسبتي هو تطبيق متكامل يهدف إلى تسهيل عملية البحث والحجز لمناسباتك الخاصة. يربط التطبيق بين ملاك القاعات والمنشآت، والعملاء الأفراد والشركات، ومقدمي الخدمات الإضافية، بالإضافة إلى مدير النظام.
+
+🔐 الصلاحيات الرئيسية
+- ملاك المنشآت: إدارة قاعاتهم، استقبال الحجوزات، الرد على التقييمات.
+- مدير النظام: إدارة المنصة، مراجعة القاعات الجديدة، متابعة التقارير.
+- العملاء: البحث عن قاعات وخدمات، حجز وإدارة مناسباتهم، فلترة متقدمة.
+- مقدمو الخدمات: إدارة خدماتهم الخاصة (تصوير، فنانين، حراسة).
+
+📞 طرق الحجز (4 طرق)
+1. حجز مباشر عبر التطبيق مع إشعارات فورية.
+2. حجز عبر الواتساب (تحويل تلقائي بتعبئة التفاصيل).
+3. حجز عبر الاتصال الهاتفي المباشر.
+4. حجز عبر الدردشة الداخلية داخل التطبيق.
+
+✨ المميزات الإضافية
+- التفاعل والتقييم وإضافة للمفضلة.
+- الأمان والخصوصية عبر بصمة الوجه والإصبع.
+- واجهة تدعم الوضع النهاري والليلي وتدعم اللغتين العربية والإنجليزية.
+- الدخول كزائر وتصفح المنصة بالكامل.
+
+💰 نظام الاشتراكات
+يعتمد التطبيق على نظام باقات اشتراك شهرية أو سنوية (بدون عمولة على الحجوزات)، مع فترة تجريبية مجانية.`,
+                tags: ["Flutter", "Firebase", "API", "تطبيق موبايل", "UI/UX"],
+                client: "مشروع خاص",
+                date: "2026",
+                stack: "Flutter, Firebase, REST API",
+                github: "#",
+                images: [
+                    "image of projects/halls booking/1.jpg",
+                    "image of projects/halls booking/2.jpg",
+                    "image of projects/halls booking/3.jpg",
+                    "image of projects/halls booking/4.jpg",
+                    "image of projects/halls booking/5.jpg",
+                    "image of projects/halls booking/6.jpg",
+                    "image of projects/halls booking/7.jpg",
+                    "image of projects/halls booking/8.jpg",
+                    "image of projects/halls booking/9.jpg",
+                    "image of projects/halls booking/10.jpg"
                 ]
             }
         };
 
         const params = new URLSearchParams(window.location.search);
         const projectId = params.get('id') || 1;
-        const project = projectData[projectId];
+        window.project = projectData[projectId];
+        var project = window.project;
 
         if (project) {
             document.getElementById('project-title').innerText = project.title;
@@ -612,13 +742,13 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
                 // Main Slide
                 const slide = document.createElement('div');
                 slide.className = 'swiper-slide';
-                slide.innerHTML = `<img src="${img}" alt="Project Image" onclick="openLightbox(this.src)">`;
+                slide.innerHTML = `<img src="${img}" alt="Project Image" loading="lazy" decoding="async" onclick="openLightbox(this.src)">`;
                 galleryTop.appendChild(slide);
 
                 // Thumb Slide
                 const thumb = document.createElement('div');
                 thumb.className = 'swiper-slide';
-                thumb.innerHTML = `<img src="${img}" alt="Thumb">`;
+                thumb.innerHTML = `<img src="${img}" alt="Thumb" loading="lazy" decoding="async">`;
                 galleryThumbs.appendChild(thumb);
             });
 
@@ -639,11 +769,6 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
 
                 if (totalImages > slidesPerView) {
                     const hiddenCount = totalImages - slidesPerView;
-                    // The last visible slide index is slidesPerView - 1
-                    // But in Swiper loop mode, it's tricky.
-                    // However, we are adding this to the THUMBS swiper which is usually NOT loop or simple.
-                    // Let's target the Nth slide of the thumbs gallery.
-
                     const thumbSlides = galleryThumbs.querySelectorAll('.swiper-slide');
                     if (thumbSlides[slidesPerView - 1]) {
                         const overlay = document.createElement('div');
@@ -665,7 +790,6 @@ Data Warehousing – ETL – SSIS – SQL Server – Data Modeling`,
                     type: "fraction",
                 },
                 breakpoints: {
-                    // responsive breakpoints
                     320: {
                         slidesPerView: 4,
                         spaceBetween: 5
