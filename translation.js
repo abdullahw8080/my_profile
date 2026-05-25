@@ -89,6 +89,10 @@ const translationMap = {
     "يهدف هذا المشروع إلى تحديد أفضل المواقع لإنشاء مراكز صحية في مديرية معين باستخدام خوارزمية K-means، لتحليل الكثافة السكانية والمسافات الجغرافية، وتقليل زمن الوصول للخدمة الصحية وتخفيف الضغط على المستشفيات المركزية.": "This project aims to determine the best locations for new health centers in Ma'ain district using the K-means algorithm, analyzing population density and geographic distances to minimize access time and relieve central hospital pressure.",
     "متجر طيف الإلكتروني - منصة بيع هواتف ذكية": "Taif E-Store - Smartphone Sales Platform",
     "يهدف مشروع \"متجر طيف\" إلى تطوير تطبيق ويب متكامل لبيع وعرض الهواتف الذكية عبر الإنترنت، بواجهة بسيطة وجذابة تعمل على جميع الأجهزة. يتميز بنظام صلاحيات متكامل (مدير/عميل)، إضافة وحذف المنتجات، بحث وفلترة دقيقة، وإمكانية الطلب عبر الواتساب برسالة تلقائية تحتوي على تفاصيل المنتج.": "The 'Taif Store' project aims to develop a web application for selling and displaying smartphones online, featuring a simple responsive layout, role authorization, product management, filtering, and WhatsApp ordering with automated details.",
+    "لوحة تحليل البيانات الذكية": "Smart Data Intelligence Dashboard",
+    "تطبيق ويب متكامل يُمكّن أي مستخدم — بدون أي خلفية برمجية — من رفع ملفات بياناته والحصول فوراً على تحليل شامل واحترافي ورسوم بيانية تفاعلية وتنظيف ذكي للبيانات.": "A comprehensive web application that enables any user — with no programming background — to upload their data files and instantly get a comprehensive, professional analysis, interactive charts, and smart data cleaning.",
+    "تحليل سلة التسوق — Market Basket Analysis": "Market Basket Analysis — Apriori Algorithm",
+    "يُحلّل سجلات الشراء الفعلية لسوبرماركت ويكتشف تلقائياً أنماطاً مخفية مثل: \"العملاء الذين يشترون المعكرونة، يشترون أيضاً المياه المعدنية في 34% من الأحيان\".": "Analyzes actual supermarket purchase logs and automatically discovers hidden patterns such as: \"Customers who buy Pasta also buy Mineral Water 34% of the time\".",
     "تحليل بيانات": "Data Analysis",
     "تنبؤ مبيعات": "Sales Forecasting",
     "الذكاء الاصطناعي": "Artificial Intelligence",
@@ -212,11 +216,19 @@ function translatePage(lang) {
     if (typeof project !== 'undefined') {
         const titleKey = lang === 'en' ? 'titleEn' : 'title';
         const descKey = lang === 'en' ? 'descriptionEn' : 'description';
+        const descHtmlKey = lang === 'en' ? 'descriptionHtmlEn' : 'descriptionHtml';
         const clientKey = lang === 'en' ? 'clientEn' : 'client';
         const stackKey = lang === 'en' ? 'stackEn' : 'stack';
 
         document.getElementById('project-title').innerText = project[titleKey] || project.title;
-        document.getElementById('project-description').innerText = project[descKey] || project.description;
+        
+        const projectDescEl = document.getElementById('project-description');
+        if (project[descHtmlKey] || project.descriptionHtml) {
+            projectDescEl.innerHTML = project[descHtmlKey] || project.descriptionHtml;
+        } else {
+            projectDescEl.innerText = project[descKey] || project.description;
+        }
+
         if (project[clientKey] || project.client) {
             document.getElementById('project-client').innerText = project[clientKey] || project.client;
         }

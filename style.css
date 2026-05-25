@@ -1247,3 +1247,114 @@ li {
         width: 95%;
     }
 }
+
+/* Styled Tables & Elements in Project Description */
+#project-description table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.95rem;
+    text-align: right;
+    background: rgba(17, 34, 64, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#project-description th {
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--accent-glow);
+    font-weight: 700;
+    padding: 12px 15px;
+    border-bottom: 2px solid rgba(100, 255, 218, 0.2);
+}
+
+#project-description td {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+}
+
+#project-description tr:last-child td {
+    border-bottom: none;
+}
+
+#project-description tr:hover td {
+    background: rgba(100, 255, 218, 0.03);
+    color: var(--text-primary);
+}
+
+/* RTL / LTR adjustment for tables */
+html[lang="en"] #project-description table {
+    text-align: left;
+}
+
+/* Styled alerts/quotes in Project Description */
+#project-description blockquote {
+    background: rgba(100, 255, 218, 0.05);
+    border-right: 4px solid var(--accent-glow);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    color: var(--text-primary);
+    font-style: normal;
+}
+
+html[lang="en"] #project-description blockquote {
+    border-right: none;
+    border-left: 4px solid var(--accent-glow);
+}
+
+/* Headings in description */
+#project-description h2, #project-description h3, #project-description h4 {
+    color: var(--text-primary);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    padding-bottom: 8px;
+}
+
+#project-description h2 i, #project-description h3 i {
+    color: var(--accent-glow);
+    margin-left: 8px;
+}
+
+html[lang="en"] #project-description h2 i, html[lang="en"] #project-description h3 i {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+#project-description ul {
+    margin: 15px 20px 15px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+html[lang="en"] #project-description ul {
+    margin: 15px 0 15px 20px;
+}
+
+#project-description ul li {
+    position: relative;
+    padding-right: 20px;
+    margin-bottom: 8px;
+}
+
+html[lang="en"] #project-description ul li {
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+#project-description ul li::before {
+    content: "•";
+    color: var(--accent-glow);
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+html[lang="en"] #project-description ul li::before {
+    right: auto;
+    left: 0;
+}
