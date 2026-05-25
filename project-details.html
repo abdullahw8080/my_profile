@@ -197,10 +197,320 @@ F1-score: 0.87
             2: {
                 titleEn: 'E-Commerce Website (Salet Alkhair)',
                 descriptionEn: `Salet Alkhair is a comprehensive e-commerce platform specializing in grocery sales, featuring a user-friendly interface for browsing categories, managing shopping cart, and checking out. It supports cash on delivery and card payments, and notifies the administrator upon order completion. It also provides reports on inventory, best sellers, and customer demographics to help make efficient business decisions.`,
+                descriptionHtmlEn: `<h3>🔍 Problems Solved by the Project</h3>
+<p>
+Many individuals experience daily difficulties while purchasing routine grocery and household supplies. <strong>Salla Al-Khair</strong> store contributes to solving the following problems:
+</p>
+<ul>
+    <li><strong>Saving time and effort:</strong> Eliminating the need to physically visit the supermarket, stand in long queues, and carry heavy bags.</li>
+    <li><strong>Facilitating customer decision-making:</strong> Clearly presenting product prices, active discounts, and offers directly before purchase without search effort.</li>
+    <li><strong>Smart Inventory Management:</strong> Helping store owners track available quantities, reducing losses due to expired or stagnant stock.</li>
+    <li><strong>Lack of statistics and reports:</strong> Addressing traditional store owners' lack of visibility into top-selling items or high-demand geographic areas.</li>
+</ul>
+
+<h3>🌟 Benefits & Features</h3>
+
+<h4>👩‍💻 For the Customer (Buyer):</h4>
+<ul>
+    <li><strong>Smooth and modern user experience:</strong> Fast product browsing categorized neatly with a quick search option.</li>
+    <li><strong>Interactive deals and discounts:</strong> Ability to clearly see the old price, new price, and discount percentage.</li>
+    <li><strong>Flexible shopping cart:</strong> Increase/decrease quantities directly from the main view or the cart with instant total updates.</li>
+    <li><strong>Wishlist:</strong> Save preferred products to view and order later.</li>
+    <li><strong>Detailed order confirmation:</strong> Specify exact delivery details (governorate, city, neighborhood, street) with secure cash on delivery (COD).</li>
+</ul>
+
+<h4>👨‍💼 For the Administration (Admins & Staff):</h4>
+<ul>
+    <li><strong>Centralized Admin Dashboard:</strong> A single interface providing managers a complete view of the store, pending orders, and incoming customer messages.</li>
+    <li><strong>Dynamic content management:</strong> Add, edit, and delete products, categories, control images, prices, inventory, and units.</li>
+    <li><strong>Order processing system:</strong> Confirm pending orders for shipping, or reject/cancel them while tracking detailed customer address and contact info.</li>
+    <li><strong>Permission management:</strong> Ability to create accounts for employees (admins / supervisors) to manage daily operations.</li>
+</ul>
+
+<h3>🗄️ Database Schema & Structure</h3>
+<p>
+The database <code>project_ecommerce</code> is designed with a solid relational structure to ensure high query performance and data integrity:
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Table Name</th>
+            <th>Function / Purpose</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>users</code></td>
+            <td>Contains customers and administrators data (name, email, phone, MD5-encrypted password, and role).</td>
+        </tr>
+        <tr>
+            <td><code>type_user</code></td>
+            <td>Defines user role types (Admin / Customer User).</td>
+        </tr>
+        <tr>
+            <td><code>products</code></td>
+            <td>Stores product details (name, old & new price, discount, stock quantity, description, weight, and category).</td>
+        </tr>
+        <tr>
+            <td><code>product_images</code></td>
+            <td>Links product images to their respective products (supports multiple images).</td>
+        </tr>
+        <tr>
+            <td><code>product_unit</code></td>
+            <td>Specifies product selling units (kg, piece, carton, bag, box, etc.).</td>
+        </tr>
+        <tr>
+            <td><code>section</code></td>
+            <td>Stores main store categories (vegetables, fruits, groceries, spices, wholesale, etc.) and their images.</td>
+        </tr>
+        <tr>
+            <td><code>pending_orders</code></td>
+            <td>Stores temporary purchase orders awaiting admin review and approval.</td>
+        </tr>
+        <tr>
+            <td><code>pending_orders_address</code></td>
+            <td>Saves delivery addresses linked to pending orders.</td>
+        </tr>
+        <tr>
+            <td><code>pending_order_items</code></td>
+            <td>Contains product items and quantities for pending orders.</td>
+        </tr>
+        <tr>
+            <td><code>orders</code></td>
+            <td>Stores orders accepted and confirmed by the administration.</td>
+        </tr>
+        <tr>
+            <td><code>orders_address</code></td>
+            <td>Delivery addresses for confirmed orders.</td>
+        </tr>
+        <tr>
+            <td><code>order_items</code></td>
+            <td>Product items details for confirmed orders.</td>
+        </tr>
+        <tr>
+            <td><code>prefer_products</code></td>
+            <td>Contains users' preferred products (wishlist).</td>
+        </tr>
+        <tr>
+            <td><code>user_comments</code></td>
+            <td>Receives customer feedback, ratings, and comments directed to the admins.</td>
+        </tr>
+        <tr>
+            <td><code>sessions</code></td>
+            <td>Dedicated to managing user sessions, cart preservation, and database connectivity.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>🛠️ System Functions & Features</h3>
+
+<h4>1. Storefront (Client Interface)</h4>
+<ul>
+    <li><strong>Main Menu & Categories:</strong> Browse items through specific sections: Fruits, Vegetables, Groceries, Baby Supplies, Water & Beverages, Household & Cleaning, Spices, and Wholesale.</li>
+    <li><strong>Advanced Search:</strong> Smart search bar filtering through product names and descriptions for quick access.</li>
+    <li><strong>Quantity Adjustments:</strong> Interactive (<code>+</code> and <code>-</code>) buttons appearing directly on products to adjust quantities without leaving the page.</li>
+    <li><strong>Interactive Shopping Cart:</strong> Displays items, individual prices, and the total sum with options to update or delete items instantly.</li>
+    <li><strong>Authentication & Security:</strong> Registration, secure login, and session validation to prevent unauthorized access.</li>
+</ul>
+
+<h4>2. Administrator Control Panel (Admin Panel)</h4>
+<ul>
+    <li><strong>Real-time Stats:</strong> Immediate alerts on unprocessed pending orders and incoming customer feedback.</li>
+    <li><strong>Product & Category Management:</strong> Add products (name, original and discount prices, stock, category, image, weight, unit), update/delete items, manage stock levels, and create categories.</li>
+    <li><strong>Order & Customer Management:</strong> Review buyer details (name, phone, address, items, quantities, total price) and take action to confirm or reject.</li>
+</ul>
+
+<h4>3. Advanced Reporting Engine</h4>
+<p>
+The dashboard features an integrated reporting suite to aid strategic commercial decisions:
+</p>
+<ul>
+    <li><strong>Best Sellers Report:</strong> Highlights highly-demanded and profitable items to optimize their supply.</li>
+    <li><strong>Daily Sales Report:</strong> Displays daily sales breakdowns and growth comparisons.</li>
+    <li><strong>Inventory & Stock Report:</strong> Monitors warehouse levels and item remaining stocks to avoid stockouts.</li>
+    <li><strong>Pending Orders Report:</strong> Continuous tracking of orders awaiting shipment for delivery speed.</li>
+    <li><strong>Stagnant Items Report:</strong> Details slow-moving products to launch targeted discounts before expiration.</li>
+    <li><strong>Top Buying Areas Report:</strong> Analyzes geographic distribution of buyers to highlight profitable regions and direct logistics.</li>
+    <li><strong>Top Customers Report:</strong> Identifies highly loyal and active customers to offer rewards or loyalty discounts.</li>
+</ul>
+
+<h3>💻 Tools & Technologies Used</h3>
+
+<h4>🎨 Frontend:</h4>
+<ul>
+    <li><strong>HTML5 & CSS3:</strong> Modern, responsive, and adaptive layouts for all screen sizes (mobile, tablet, desktop).</li>
+    <li><strong>JavaScript (Vanilla JS):</strong> Powers real-time shopping cart calculations, mobile side menu toggles, and instant searches.</li>
+    <li><strong>Swiper JS:</strong> Implements fluid and engaging banner sliders for offers and products.</li>
+    <li><strong>Font Awesome & Boxicons:</strong> Supplies a rich library of clean, vector-based navigation icons.</li>
+    <li><strong>Google Fonts (Cairo):</strong> Cairo Arabic font integration for optimal readability.</li>
+</ul>
+
+<h4>⚙️ Backend & Database:</h4>
+<ul>
+    <li><strong>PHP (8.x / 7.x):</strong> Handles requests, custom session management, invoice calculation, and database operations.</li>
+    <li><strong>MySQL (MariaDB):</strong> Reliable storage, session state preservation, and foreign key relations.</li>
+    <li><strong>UTF-8 mb4 Encoding:</strong> Ensures flawless Arabic character support across all database and application layers.</li>
+</ul>`,
                 clientEn: 'Salet Alkhair Supermarket',
                 stackEn: 'Html, CSS, JS, PHP, MySQL',
                 title: "موقع لمتجر إلكتروني (سلة الخير)",
                 description: `سلة الخير هو متجر إلكتروني متكامل ومتخصص في بيع المواد الغذائية، يوفّر واجهة استخدام سهلة وبسيطة تُمكّن المستخدم من التسوق وتصفح المنتجات حسب الأقسام وإضافة المنتجات إلى سلة التسوق بكل سهولة. يتيح المتجر خيارات دفع متعددة تشمل الدفع النقدي (كاش) أو عبر البطاقة الإلكترونية. بعد إتمام الطلب، يتم إرساله مباشرة إلى مدير المتجر الذي يقوم باستلامه ومعالجته وإرساله للتنفيذ. كما يوفر النظام تقارير تفصيلية لمدير المتجر تشمل إدارة المخزون، والمنتجات الأكثر مبيعًا، وبيانات العملاء، والمناطق الأكثر شراءً، مما يساعد على تحسين الأداء واتخاذ قرارات فعّالة.`,
+                descriptionHtml: `<h3>🔍 المشكلة التي يحلها المشروع</h3>
+<p>
+يعاني الكثير من الأفراد في حياتهم اليومية من صعوبات أثناء شراء الاحتياجات المنزلية والغذائية الروتينية. يساهم متجر <strong>سلة الخير</strong> في حل المشكلات التالية:
+</p>
+<ul>
+    <li><strong>توفير الوقت والجهد:</strong> الاستغناء عن الذهاب الفعلي للسوبرماركت والوقوف في طوابير الانتظار الطويلة وحمل الأمتعة الثقيلة.</li>
+    <li><strong>تسهيل اتخاذ القرار للعميل:</strong> توضيح أسعار المنتجات بشكل مباشر قبل الشراء، وتبيين الخصومات والعروض الفعالة دون عناء البحث.</li>
+    <li><strong>إدارة المخزون الذكية:</strong> مساعدة أصحاب المتاجر في معرفة كميات السلع المتوفرة، والحد من الخسائر الناتجة عن انتهاء صلاحية المنتجات أو تراكم المنتجات الراكدة.</li>
+    <li><strong>الافتقار إلى الإحصاءات والتقارير:</strong> عدم معرفة أصحاب المشاريع التقليدية بالسلع الأكثر مبيعاً لديهم، أو المناطق الجغرافية الأكثر شراءً لتركيز الجهود التسويقية والخدمية عليها.</li>
+</ul>
+
+<h3>🌟 الفوائد والمزايا</h3>
+
+<h4>👩‍💻 للعميل (المشتري):</h4>
+<ul>
+    <li><strong>تجربة مستخدم سلسة وعصرية:</strong> تصفح سريع للمنتجات مقسمة حسب الفئات مع ميزة البحث السريع.</li>
+    <li><strong>عروض وتخفيضات تفاعلية:</strong> إمكانية رؤية السعر القديم والجديد ونسبة الخصم بوضوح.</li>
+    <li><strong>سلة تسوق مرنة:</strong> إمكانية زيادة ونقصان كمية المنتجات من واجهة العرض مباشرة أو داخل السلة مع حساب فوري للمجموع الإجمالي.</li>
+    <li><strong>قائمة المفضلة:</strong> لحفظ المنتجات التي يفضلها العميل للعودة إليها وطلبها لاحقاً.</li>
+    <li><strong>تأكيد الطلبات التفصيلي:</strong> كتابة تفاصيل التوصيل الجغرافية بدقة (المحافظة، المدينة، الحي، الشارع) والدفع الآمن عند الاستلام (كاش).</li>
+</ul>
+
+<h4>👨‍💼 للإدارة (المدراء والموظفون):</h4>
+<ul>
+    <li><strong>لوحة تحكم مركزية (Admin Dashboard):</strong> واجهة واحدة تمنح المشرفين رؤية شاملة للمتجر وعدد الطلبات الواردة ورسائل العملاء الجديدة.</li>
+    <li><strong>إدارة ديناميكية للمحتوى:</strong> إضافة وتعديل وحذف المنتجات والأقسام والتحكم بالصور والأسعار والمخزون والوحدات.</li>
+    <li><strong>نظام معالجة الطلبات:</strong> قبول وتأكيد الطلبات المعلقة لشحنها، أو رفضها وإلغائها مع تتبع تفاصيل عنوان العميل الجغرافي ورقم هاتفه.</li>
+    <li><strong>توزيع الصلاحيات:</strong> إمكانية إنشاء حسابات جديدة للموظفين (مشرفين / إداريين) لإدارة العمليات اليومية.</li>
+</ul>
+
+<h3>🗄️ الهيكل البرمجي وقاعدة البيانات</h3>
+<p>
+تم بناء قاعدة بيانات المشروع <code>project_ecommerce</code> بشكل علاقي متين لضمان سرعة الاستعلامات وتكامل البيانات. يحتوي النظام على الجداول التالية:
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>اسم الجدول</th>
+            <th>الوظيفة</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>users</code></td>
+            <td>يحتوي على بيانات العملاء والمشرفين (الاسم، البريد الإلكتروني، الهاتف، كلمة المرور المشفرة بـ MD5، وصلاحية الحساب).</td>
+        </tr>
+        <tr>
+            <td><code>type_user</code></td>
+            <td>يحدد نوع الحساب (مسؤول Admin / عميل User).</td>
+        </tr>
+        <tr>
+            <td><code>products</code></td>
+            <td>يخزن بيانات المنتجات (الاسم، السعر القديم والجديد، التخفيض، الكمية المتاحة، الوصف، الوزن، القسم).</td>
+        </tr>
+        <tr>
+            <td><code>product_images</code></td>
+            <td>يربط صور المنتجات بالمنتج المعني (يدعم رفع صور متعددة).</td>
+        </tr>
+        <tr>
+            <td><code>product_unit</code></td>
+            <td>يحدد وحدات بيع المنتجات (كيلو، حبة، كرتون، كيس، علبة، حزمة، الخ).</td>
+        </tr>
+        <tr>
+            <td><code>section</code></td>
+            <td>يخزن أقسام المتجر الرئيسية (خضروات، فواكه، مواد غذائية، بهارات، قسم الجملة، الخ) وصورها.</td>
+        </tr>
+        <tr>
+            <td><code>pending_orders</code></td>
+            <td>يخزن طلبات الشراء المؤقتة التي تنتظر مراجعة وقبول الإدارة.</td>
+        </tr>
+        <tr>
+            <td><code>pending_orders_address</code></td>
+            <td>يحتفظ بعناوين التوصيل المرتبطة بالطلبات المعلقة.</td>
+        </tr>
+        <tr>
+            <td><code>pending_order_items</code></td>
+            <td>يحتوي على تفاصيل المنتجات والكميات المحددة للطلبات المعلقة.</td>
+        </tr>
+        <tr>
+            <td><code>orders</code></td>
+            <td>يخزن الطلبات التي تم قبولها وتأكيدها من قبل الإدارة.</td>
+        </tr>
+        <tr>
+            <td><code>orders_address</code></td>
+            <td>عناوين توصيل الطلبات المؤكدة.</td>
+        </tr>
+        <tr>
+            <td><code>order_items</code></td>
+            <td>تفاصيل منتجات الطلبات المؤكدة.</td>
+        </tr>
+        <tr>
+            <td><code>prefer_products</code></td>
+            <td>يحتوي على المنتجات المفضلة للمستخدمين (قائمة الأمنيات).</td>
+        </tr>
+        <tr>
+            <td><code>user_comments</code></td>
+            <td>يستقبل تعليقات وآراء ومقترحات العملاء المعروضة والموجهة للإدارة.</td>
+        </tr>
+        <tr>
+            <td><code>sessions</code></td>
+            <td>مخصص لإدارة جلسات المستخدمين وحفظ بيانات السلة والاتصال عبر قاعدة البيانات لضمان بقاء الجلسة آمنة ومستقرة.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>🛠️ وظائف وميزات النظام</h3>
+
+<h4>1. واجهة العميل (Storefront)</h4>
+<ul>
+    <li><strong>القائمة الرئيسية والأقسام:</strong> تصفح المنتجات عبر الأقسام المختلفة مثل الفواكه، الخضروات، المواد الغذائية، مستلزمات الأطفال، المياه والمشروبات، المواد المنزلية والتنظيف، البهارات، وقسم الجملة.</li>
+    <li><strong>البحث المتقدم:</strong> شريط بحث ذكي يبحث في عناوين وأوصاف المنتجات للوصول السريع.</li>
+    <li><strong>التحكم بالكميات:</strong> أزرار تفاعلية (<code>+</code> و <code>-</code>) تظهر عند الضغط على المنتج لتعديل الكمية المطلوبة بشكل مباشر دون الحاجة للانتقال لصفحة أخرى.</li>
+    <li><strong>سلة تسوق تفاعلية:</strong> تعرض المنتجات المضافة وسعر كل منها والمجموع النهائي مع إمكانية تحديث الكمية أو حذف المنتج فورياً.</li>
+    <li><strong>نظام الحسابات والأمان:</strong> تسجيل حساب جديد، تسجيل الدخول الآمن، والتحقق من صلاحية الجلسة لمنع الوصول غير المصرح به للملفات.</li>
+</ul>
+
+<h4>2. لوحة التحكم للمسؤولين (Admin Panel)</h4>
+<ul>
+    <li><strong>إحصائيات فورية:</strong> إشعار الإدارة فوراً بعدد الطلبات المعلقة غير المعالجة والرسائل الجديدة الواردة من العملاء.</li>
+    <li><strong>إدارة المنتجات والأقسام:</strong> إضافة منتج جديد (الاسم، السعر الأصلي والجديد، الكمية، القسم، الصورة، الوزن، وحدة البيع)، تعديل وحذف المنتجات وتحديث المخزون، وإضافة أقسام جديدة وصورها.</li>
+    <li><strong>إدارة الطلبات والعملاء:</strong> استعراض تفاصيل طلب المشتري (الاسم، الهاتف، العنوان بالتفصيل، المنتجات المطلوبة وكمياتها، والسعر الإجمالي) واتخاذ إجراء القبول (Confirm) أو الرفض (Reject).</li>
+</ul>
+
+<h4>3. محرك التقارير الذكي والمتقدم (Advanced Reporting Engine)</h4>
+<p>
+تتميز لوحة التحكم بنظام تقارير إدارية متكامل يساعد على اتخاذ القرارات التجارية الصائبة:
+</p>
+<ul>
+    <li><strong>تقرير المنتجات الأكثر مبيعاً:</strong> يوضح السلع الأكثر طلباً وربحية لزيادة المعروض منها.</li>
+    <li><strong>تقرير المبيعات اليومية:</strong> يعرض كشفاً تفصيلياً بالمبيعات اليومية ومقارنتها بالتواريخ السابقة وتتبع نمو المتجر.</li>
+    <li><strong>تقرير المخزون والمنتجات:</strong> يوفر إشرافاً دقيقاً على حالة المستودع والكميات المتبقية للسلع لتجنب نفاد المخزون.</li>
+    <li><strong>تقرير الطلبات المعلقة:</strong> تتبع مستمر للطلبات التي لم تُشحن بعد لضمان سرعة التوصيل.</li>
+    <li><strong>تقرير المنتجات الراكدة (Slow Moving Items):</strong> جرد بالمنتجات ذات الإقبال الضعيف لعمل عروض ترويجية وتخفيضات للتخلص منها قبل انتهاء صلاحيتها.</li>
+    <li><strong>تقرير المناطق الأكثر شراءً:</strong> يحلل التوزيع الجغرافي للمشترين لتحديد الأحياء والمناطق الأكثر ربحية وتوجيه سيارات التوصيل إليها.</li>
+    <li><strong>تقرير العملاء الأكثر شراءً:</strong> قائمة بالعملاء الأكثر تفاعلاً وولاءً للمتجر لتقديم مكافآت أو خصومات خاصة لهم.</li>
+</ul>
+
+<h3>💻 الأدوات والتقنيات المستخدمة</h3>
+
+<h4>🎨 الواجهات الرسومية (Frontend):</h4>
+<ul>
+    <li><strong>HTML5 & CSS3:</strong> لتصميم واجهات عصرية ومتجاوبة بالكامل مع مختلف الشاشات (الهواتف، الأجهزة اللوحية، الحواسيب).</li>
+    <li><strong>JavaScript (Vanilla JS):</strong> لإضافة التفاعل مثل تعديل كميات السلال، إظهار وإخفاء القوائم الجانبية للهاتف، والبحث السريع.</li>
+    <li><strong>Swiper JS:</strong> لتنفيذ سلايدر العروض الترويجية والمنتجات بشكل انسيابي وجذاب في الواجهة الرئيسية.</li>
+    <li><strong>Font Awesome & Boxicons:</strong> لتوفير مكتبة غنية من الأيقونات الرمزية التوضيحية لسهولة التصفح.</li>
+    <li><strong>Google Fonts (Cairo):</strong> استخدام خط "Cairo" العربي الأنيق المعتمد في أفضل التصاميم العربية الحديثة لضمان مقروئية ممتازة.</li>
+</ul>
+
+<h4>⚙️ البرمجة الخلفية وقاعدة البيانات (Backend & Database):</h4>
+<ul>
+    <li><strong>PHP (8.x / 7.x):</strong> لمعالجة الطلبات، وإدارة الجلسات بشكل مخصص، وحساب العمليات الرياضية للفواتير، والتواصل مع قاعدة البيانات.</li>
+    <li><strong>MySQL (MariaDB):</strong> لإدارة وتخزين البيانات وحفظ الجلسات وتأمين العلاقات البرمجية بين الجداول.</li>
+    <li><strong>ترميز UTF-8 mb4:</strong> لضمان عرض وقراءة الحروف العربية بشكل صحيح وخالٍ من الأخطاء في كل شاشات المتجر وقاعدة البيانات.</li>
+</ul>`,
                 tags: ["Html", "CSS", "JS", "PHP", "MySQL"],
                 client: "سوبر ماركة سلة الخير",
                 date: "مارس 2024",
