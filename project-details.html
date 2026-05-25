@@ -846,54 +846,435 @@ Using AI-supported K-means clustering to analyze population density, geographic 
             },
             7: {
                 titleEn: 'Household Supplies Sales Analysis & Forecasting System',
-                descriptionEn: `An End-to-End sales performance analysis of over 2600 transactions. Includes data extraction and cleaning via MySQL, visual analysis using Power BI, and time series forecasting (Holt-Winters) using Python for 2026 sales.
+                descriptionEn: `An End-to-End sales performance analysis of over 2600 transactions. Includes data extraction and cleaning via MySQL, visual analysis using Power BI, and time series forecasting (Holt-Winters) using Python for 2026 sales.`,
+                descriptionHtmlEn: `<h3>🏆 Best Project Award — Batch 2026</h3>
+<p>
+This project won the title of <strong>Best Project in Batch 2026</strong>. It presents an integrated End-to-End strategic analysis of a household supplies company's sales performance, linking relational databases, interactive dashboards, and AI forecasting into one unified platform.
+</p>
 
-📊 Data Overview
-Analyzed a huge database of over 2600 sales transactions (5247 items sold) with total revenue of 33.8 million EGP.
+<h3>❌ Problems Solved</h3>
+<p>The company was suffering from:</p>
+<ul>
+    <li>Lack of unified sales visibility across branches and geographic regions.</li>
+    <li>Difficulty tracking employee performance against targets.</li>
+    <li>Inability to forecast demand, leading to repeated stock shortages for certain items.</li>
+    <li>Pricing decisions based on intuition rather than data.</li>
+</ul>
+<p>The project delivers a comprehensive solution integrating data cleaning, visual analysis, and sales forecasting in one platform.</p>
 
-🚀 Technical Highlights
-1. Data Extraction & Cleaning (SQL): Using MySQL to join tables, handle null values, and clean financial data.
-2. Visual Analysis (Power BI): Designing 6 interactive pages containing 20+ charts covering sales, branches, products, and employee performance.
-3. Smart Forecasting (Python): Developing a Holt-Winters statistical model to forecast sales volume for 2026.
+<h3>📊 Data Overview</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Indicator</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Total Sales Transactions</td><td><strong>+2,616 transactions</strong></td></tr>
+        <tr><td>Total Quantity Sold</td><td>5,247 units</td></tr>
+        <tr><td>Total Revenue (Net)</td><td><strong>33.80 million EGP</strong></td></tr>
+        <tr><td>Total Revenue (Gross)</td><td>35 million EGP</td></tr>
+        <tr><td>Total Discounts Given</td><td>1.59 million EGP</td></tr>
+        <tr><td>Average Order Value</td><td>12,918 EGP</td></tr>
+        <tr><td>Number of Customers</td><td>40 customers</td></tr>
+        <tr><td>Number of Branches</td><td>6 branches</td></tr>
+    </tbody>
+</table>
 
-🔮 Future Predictions (2026)
-- Forecasted revenue of 17.4 million EGP by the end of 2026.
-- Quantifying demand for top-selling items to prevent inventory shortage.`,
+<h3>📈 Annual Sales Growth</h3>
+<table>
+    <thead>
+        <tr><th>Year</th><th>Revenue</th><th>Growth</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>2023</td><td>5.35 million EGP</td><td>—</td></tr>
+        <tr><td>2024</td><td><strong>15.77 million EGP</strong></td><td><strong style="color:var(--accent-glow)">📈 +195% Peak Year</strong></td></tr>
+        <tr><td>2025</td><td>18.00 million EGP</td><td>📈 +14%</td></tr>
+        <tr><td>2026</td><td>17.44 million EGP</td><td>🔮 Forecast</td></tr>
+    </tbody>
+</table>
+<blockquote>🔥 <strong>Turning Point:</strong> Year 2024 witnessed an exceptional jump of +195% compared to 2023, making it the company's peak year in history.</blockquote>
+
+<h3>🚀 Technical Highlights</h3>
+
+<h4>1. 🗄️ Data Extraction & Cleaning — MySQL</h4>
+<ul>
+    <li>Joining 5+ relational tables with complex JOIN queries.</li>
+    <li>Handling missing and duplicate values to ensure 100% data accuracy.</li>
+    <li>Building aggregation queries to calculate Key Performance Indicators (KPIs).</li>
+    <li>Exporting clean data for use in Power BI and Python.</li>
+</ul>
+
+<h4>2. 📊 Interactive Visual Analysis — Power BI & DAX</h4>
+<p>Designing <strong>6 interactive pages</strong> containing <strong>20+ charts</strong>:</p>
+<table>
+    <thead>
+        <tr><th>Page</th><th>Content</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><strong>Overview</strong></td><td>Key performance indicators, monthly sales, branch distribution</td></tr>
+        <tr><td><strong>Sales 1</strong></td><td>Sales analysis by year and month, average order value</td></tr>
+        <tr><td><strong>Sales 2</strong></td><td>Geographic customer analysis, payment methods, seasonal sales</td></tr>
+        <tr><td><strong>Products</strong></td><td>Product analysis by quantity, category, and profitability</td></tr>
+        <tr><td><strong>Customers</strong></td><td>Customer classification, top 10 customers, purchase behavior</td></tr>
+        <tr><td><strong>Employees</strong></td><td>Employee performance, targets vs. actual</td></tr>
+    </tbody>
+</table>
+
+<h4>3. 🤖 Smart Forecasting — Python (Holt-Winters)</h4>
+<ul>
+    <li>Holt-Winters model for seasonal time series analysis.</li>
+    <li><strong>Model Accuracy: 93%</strong> (MAPE = 7%)</li>
+    <li>Forecasting monthly sales for 2026 with a total of <strong>17.44 million EGP</strong>.</li>
+    <li>Forecasting top 10 products by volume for 2026.</li>
+</ul>
+
+<h3>💡 Key Findings & AI Insights</h3>
+
+<h4>🔑 Sales Drivers (Feature Importance)</h4>
+<table>
+    <thead>
+        <tr><th>Factor</th><th>Impact %</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Unit Price</td><td><strong style="color:var(--accent-glow)">74% — Largest driver of purchase decisions</strong></td></tr>
+        <tr><td>Quantity</td><td>24%</td></tr>
+        <tr><td>Discount Rate</td><td>~1%</td></tr>
+        <tr><td>Branch Code</td><td>&lt;1%</td></tr>
+        <tr><td>Payment Method</td><td>&lt;1%</td></tr>
+    </tbody>
+</table>
+<blockquote>💡 <strong>Strategic Insight:</strong> Unit price controls 74% of purchase decisions, directing the company toward smart competitive pricing strategies rather than relying on discounts.</blockquote>
+
+<h4>🏪 Branch Performance</h4>
+<table>
+    <thead>
+        <tr><th>Branch</th><th>Sales</th><th>Share</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Alexandria</td><td>8.63M EGP</td><td><strong>25.5% 🥇</strong></td></tr>
+        <tr><td>Assiut</td><td>6.37M EGP</td><td>18.9%</td></tr>
+        <tr><td>Tanta</td><td>6.02M EGP</td><td>17.8%</td></tr>
+        <tr><td>Main Branch (Cairo)</td><td>6.0M EGP</td><td>—</td></tr>
+        <tr><td>Minya</td><td>4.5M EGP</td><td>—</td></tr>
+    </tbody>
+</table>
+
+<h4>🛍️ Top Products by Value</h4>
+<table>
+    <thead>
+        <tr><th>Product</th><th>Revenue</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Refrigerator 21 Cu.Ft</td><td>3.7M EGP</td></tr>
+        <tr><td>Smart TV 55"</td><td>3.2M EGP</td></tr>
+        <tr><td>Refrigerator 18 Cu.Ft</td><td>3.1M EGP</td></tr>
+        <tr><td>Air Conditioner 3HP</td><td>2.8M EGP</td></tr>
+    </tbody>
+</table>
+
+<h4>👥 Customer Performance</h4>
+<ul>
+    <li><strong>Top Customer by Revenue:</strong> Adel Ahmed Mohammed — 1.21 million EGP</li>
+    <li><strong>Customer Distribution:</strong> Companies 37.5% | Traders 32.5% | Individuals 30%</li>
+    <li><strong>Highest Geographic Order Density:</strong> Aswan (412 orders), Al-Buhayra (265), Minya (241)</li>
+</ul>
+
+<h4>🧑‍💼 Employee Performance</h4>
+<ul>
+    <li><strong>Top Employee:</strong> Youssef Saleh Mohammed — 2.47 million EGP in sales</li>
+    <li><strong>Average Achievement vs Target:</strong> 1,689.80% (Far exceeded targets)</li>
+</ul>
+
+<h3>🔮 2026 Forecast — Monthly Sales Predictions</h3>
+<table>
+    <thead>
+        <tr><th>Month</th><th>Forecast (EGP)</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>January</td><td>1,289,056</td></tr>
+        <tr><td>February</td><td>1,448,072</td></tr>
+        <tr><td>March (Q1 Peak)</td><td>1,501,221</td></tr>
+        <tr><td>April</td><td>1,514,123</td></tr>
+        <tr><td>May</td><td>1,494,743</td></tr>
+        <tr><td>June</td><td>1,483,032</td></tr>
+        <tr><td>July</td><td>1,369,871</td></tr>
+        <tr><td>August</td><td>1,419,822</td></tr>
+        <tr><td>September</td><td>1,381,292</td></tr>
+        <tr><td>October</td><td>1,377,080</td></tr>
+        <tr><td>November (Q4 Peak)</td><td>1,536,096</td></tr>
+        <tr><td>December</td><td>1,589,245</td></tr>
+        <tr><td><strong>Total</strong></td><td><strong style="color:var(--accent-glow)">17,414,522 EGP</strong></td></tr>
+    </tbody>
+</table>
+
+<h4>📦 Top 10 Products Forecast by Volume (2026)</h4>
+<table>
+    <thead>
+        <tr><th>Product</th><th>Expected Quantity</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>Steam Iron</td><td>211 units</td></tr>
+        <tr><td>Smart TV 55"</td><td>193 units</td></tr>
+        <tr><td>Electric Blender</td><td>183 units</td></tr>
+        <tr><td>Microwave 32L</td><td>177 units</td></tr>
+        <tr><td>Smart TV 43"</td><td>164 units</td></tr>
+        <tr><td>Refrigerator 21 Cu.Ft</td><td>163 units</td></tr>
+        <tr><td>Gas Water Heater 10L</td><td>162 units</td></tr>
+        <tr><td>Tower Fan</td><td>160 units</td></tr>
+        <tr><td>Refrigerator 14 Cu.Ft</td><td>157 units</td></tr>
+        <tr><td>Electric Water Heater 50L</td><td>156 units</td></tr>
+    </tbody>
+</table>
+
+<h3>🛠️ Tech Stack</h3>
+<table>
+    <thead>
+        <tr><th>Technology</th><th>Purpose</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>🗄️ MySQL 8.0</td><td>Data Engineering & Complex SQL Queries</td></tr>
+        <tr><td>📊 Power BI</td><td>Business Intelligence & Interactive Dashboards</td></tr>
+        <tr><td>📐 DAX</td><td>KPIs & Calculated Measures</td></tr>
+        <tr><td>🐍 Python 3.10+</td><td>Machine Learning & Forecasting</td></tr>
+        <tr><td>🧮 Pandas</td><td>Data Manipulation & Transformation</td></tr>
+        <tr><td>📈 Statsmodels</td><td>Time Series (Holt-Winters)</td></tr>
+        <tr><td>📉 Matplotlib</td><td>Data Visualization</td></tr>
+    </tbody>
+</table>
+
+<h3>📌 Skills Highlighted</h3>
+<table>
+    <thead>
+        <tr><th>Domain</th><th>Skill</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>📊 Business Intelligence</td><td>BI Dashboarding & Reporting</td></tr>
+        <tr><td>🔬 Data Science</td><td>Statistical Modeling & Analysis</td></tr>
+        <tr><td>🤖 Artificial Intelligence</td><td>AI-driven Insights & Forecasting</td></tr>
+        <tr><td>🗄️ Database Management</td><td>SQL Engineering & Optimization</td></tr>
+        <tr><td>💰 Financial Analysis</td><td>Financial Forecasting & KPI Design</td></tr>
+        <tr><td>📍 Geospatial Analysis</td><td>Geographic Sales Distribution</td></tr>
+        <tr><td>🎯 Decision Making</td><td>Data-Driven Decision Support</td></tr>
+    </tbody>
+</table>`,
                 clientEn: 'Household Supplies Company',
                 stackEn: 'SQL (MySQL), Power BI (DAX), Python (Pandas, Statsmodels), Time Series Forecasting',
                 title: "نظام تحليل وتنبؤ مبيعات المستلزمات المنزلية (2023-2026)",
-                description: `يهدف هذا المشروع إلى تقديم تحليل استراتيجي متكامل (End-to-End) لأداء مبيعات شركة مستلزمات منزلية، مع الربط بين البيانات التاريخية والذكاء الاصطناعي للتنبؤ بالاتجاهات المستقبلية.
+                description: `يهدف هذا المشروع إلى تقديم تحليل استراتيجي متكامل (End-to-End) لأداء مبيعات شركة مستلزمات منزلية، مع الربط بين البيانات التاريخية والذكاء الاصطناعي للتنبؤ بالاتجاهات المستقبلية.`,
+                descriptionHtml: `<h3>🏆 أفضل مشروع — دفعة 2026</h3>
+<p>
+حاز هذا المشروع على لقب <strong>أفضل مشروع في دفعة 2026</strong>. يقدم تحليلاً استراتيجياً متكاملاً (End-to-End) لأداء مبيعات شركة مستلزمات منزلية مصرية، يربط بين قواعد البيانات العلائقية، لوحات المؤشرات التفاعلية، والذكاء الاصطناعي للتنبؤ بالاتجاهات المستقبلية في منصة واحدة متكاملة.
+</p>
 
-📊 نظرة عامة على البيانات
-تم تحليل قاعدة بيانات ضخمة تحتوي على أكثر من 2600 عملية بيع مفصلة، شملت 5247 قطعة مباعة، بإجمالي إيرادات بلغت 33.8 مليون جنيه مصري.
+<h3>❌ المشكلة التي يحلّها المشروع</h3>
+<p>كانت الشركة تعاني من:</p>
+<ul>
+    <li>غياب الرؤية الموحّدة للمبيعات عبر الفروع والمناطق الجغرافية المختلفة.</li>
+    <li>صعوبة تتبع أداء الموظفين ومقارنته بالمستهدفات.</li>
+    <li>عدم القدرة على التنبؤ بالطلب مما أدى إلى نقص متكرر في المخزون لبعض الأصناف.</li>
+    <li>اتخاذ قرارات التسعير بشكل حدسي بدلاً من الاعتماد على البيانات.</li>
+</ul>
+<p>يقدم المشروع حلاً شاملاً يدمج تنظيف البيانات، التحليل البصري، وتوقعات المبيعات في منصة واحدة متكاملة.</p>
 
-🚀 المميزات التقنية للمشروع
-يتميز المشروع بدمج ثلاث تقنيات أساسية للوصول إلى أدق النتائج:
-1. استخراج وتنظيف البيانات (SQL): استخدام MySQL لربط الجداول، معالجة القيم المفقودة، وضمان دقة البيانات المالية.
-2. التحليل البصري (Power BI): تصميم 6 صفحات تفاعلية تحتوي على أكثر من 20 رسماً بيانياً تغطي المبيعات، الفروع، المنتجات، والموظفين.
-3. التنبؤ الذكي (Python): تطوير نموذج إحصائي (Holt-Winters) للتنبؤ بحجم المبيعات والطلب الكمي لعام 2026.
+<h3>📊 نظرة عامة على البيانات</h3>
+<table>
+    <thead>
+        <tr>
+            <th>المؤشر</th>
+            <th>القيمة</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>إجمالي عمليات البيع</td><td><strong>+2,616 عملية</strong></td></tr>
+        <tr><td>إجمالي الكميات المباعة</td><td>5,247 قطعة</td></tr>
+        <tr><td>إجمالي الإيرادات (صافي)</td><td><strong>33.80 مليون جنيه</strong></td></tr>
+        <tr><td>إجمالي الإيرادات (إجمالي)</td><td>35 مليون جنيه</td></tr>
+        <tr><td>إجمالي الخصومات الممنوحة</td><td>1.59 مليون جنيه</td></tr>
+        <tr><td>متوسط قيمة الطلب</td><td>12,918 جنيه</td></tr>
+        <tr><td>عدد العملاء</td><td>40 عميل</td></tr>
+        <tr><td>عدد الفروع</td><td>6 فروع</td></tr>
+    </tbody>
+</table>
 
-🔍 محاور التحليل الرئيسية
-- تحليل المبيعات والنمو: دراسة الأداء السنوي (2024 كعام ذروة) والترند الشهري.
-- التوزيع الجغرافي: تحليل أداء الفروع (الإسكندرية في الصدارة) وكثافة الطلب في المحافظات (أسوان، البحيرة).
-- سلوك المنتجات: تصنيف المنتجات إلى فئات (أجهزة كبيرة/صغيرة) وتحديد المنتجات الأكثر ربحية.
-- أداء الموظفين: تقييم كفاءة مندوبي المبيعات ومدى تحقيقهم للمستهدفات المالية.
+<h3>📈 نمو المبيعات السنوي</h3>
+<table>
+    <thead>
+        <tr><th>السنة</th><th>الإيرادات</th><th>النمو</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>2023</td><td>5.35 مليون جنيه</td><td>—</td></tr>
+        <tr><td>2024</td><td><strong>15.77 مليون جنيه</strong></td><td><strong style="color:var(--accent-glow)">📈 +195% عام الذروة</strong></td></tr>
+        <tr><td>2025</td><td>18.00 مليون جنيه</td><td>📈 +14%</td></tr>
+        <tr><td>2026</td><td>17.44 مليون جنيه</td><td>🔮 توقع</td></tr>
+    </tbody>
+</table>
+<blockquote>🔥 <strong>نقطة تحول:</strong> شهد عام 2024 قفزة استثنائية بنسبة +195% مقارنةً بعام 2023، ليتحول إلى عام الذروة في تاريخ الشركة.</blockquote>
 
-💡 محركات البيع (AI Insights)
-كشف التحليل باستخدام الذكاء الاصطناعي أن "سعر الوحدة" هو المؤثر الأكبر على قرار الشراء بنسبة 74%، مما ساعد في وضع استراتيجيات تسعير ذكية.
+<h3>🚀 المميزات التقنية للمشروع</h3>
 
-🔮 التنبؤات المستقبلية 2026
-- توقع تحقيق إيرادات بقيمة 17.4 مليون جنيه بنهاية عام 2026.
-- تحديد الكميات المطلوبة بدقة للأصناف الأكثر طلباً (مثل الشاشات والمكاوي البخارية) لتفادي نقص المخزون.
+<h4>1. 🗄️ استخراج وتنظيف البيانات — MySQL</h4>
+<ul>
+    <li>ربط أكثر من 5 جداول علائقية عبر استعلامات JOIN معقدة.</li>
+    <li>معالجة القيم المفقودة والمكررة لضمان دقة 100% في البيانات المالية.</li>
+    <li>بناء استعلامات تجميعية (Aggregations) لحساب المؤشرات الرئيسية (KPIs).</li>
+    <li>تصدير البيانات المنظّفة لاستخدامها في Power BI وPython.</li>
+</ul>
 
-🛠️ التقنيات المستخدمة
-- MySQL: لإدارة قواعد البيانات واستعلامات SQL المعقدة.
-- Power BI & DAX: لإنشاء المؤشرات (KPIs) واللوحات التفاعلية.
-- Python (Pandas, Statsmodels): لمعالجة البيانات الضخمة وبناء نماذج التنبؤ.
-- تحليل السلاسل الزمنية (Time Series Analysis).
+<h4>2. 📊 التحليل البصري التفاعلي — Power BI & DAX</h4>
+<p>تصميم <strong>6 صفحات تفاعلية</strong> تحتوي على أكثر من <strong>20 رسماً بيانياً</strong>:</p>
+<table>
+    <thead>
+        <tr><th>الصفحة</th><th>المحتوى</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><strong>Overview</strong></td><td>مؤشرات الأداء الرئيسية، المبيعات الشهرية، توزيع الفروع</td></tr>
+        <tr><td><strong>Sales 1</strong></td><td>تحليل المبيعات حسب السنة والشهر، متوسط قيمة الطلب</td></tr>
+        <tr><td><strong>Sales 2</strong></td><td>تحليل العملاء الجغرافي، طرق الدفع، المبيعات الفصلية</td></tr>
+        <tr><td><strong>Products</strong></td><td>تحليل المنتجات حسب الكمية والفئة والربحية</td></tr>
+        <tr><td><strong>Customers</strong></td><td>تصنيف العملاء، أفضل 10 عملاء، سلوك الشراء</td></tr>
+        <tr><td><strong>Employees</strong></td><td>أداء الموظفين، المستهدفات مقابل الفعلي</td></tr>
+    </tbody>
+</table>
 
-📌 مهارات يبرزها المشروع:
-تحليل الأعمال (Business Analytics) – ذكاء الأعمال (BI) – علم البيانات (Data Science) – التنبؤ المالي – إدارة قواعد البيانات – اتخاذ القرارات القائمة على البيانات.`,
+<h4>3. 🤖 التنبؤ الذكي — Python (Holt-Winters)</h4>
+<ul>
+    <li>نموذج Holt-Winters للتحليل الزمني الموسمي.</li>
+    <li><strong>دقة النموذج: 93%</strong> (MAPE = 7%)</li>
+    <li>التنبؤ بالمبيعات الشهرية لعام 2026 بإجمالي <strong>17.44 مليون جنيه</strong>.</li>
+    <li>التنبؤ بأعلى 10 منتجات مبيعاً كمياً لعام 2026.</li>
+</ul>
+
+<h3>💡 أبرز النتائج والرؤى (AI Insights)</h3>
+
+<h4>🔑 محركات البيع (Feature Importance)</h4>
+<table>
+    <thead>
+        <tr><th>العامل</th><th>نسبة التأثير</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>سعر الوحدة</td><td><strong style="color:var(--accent-glow)">74% — المؤثر الأكبر على قرار الشراء</strong></td></tr>
+        <tr><td>الكمية</td><td>24%</td></tr>
+        <tr><td>نسبة الخصم</td><td>~1%</td></tr>
+        <tr><td>كود الفرع</td><td>&lt;1%</td></tr>
+        <tr><td>طريقة الدفع</td><td>&lt;1%</td></tr>
+    </tbody>
+</table>
+<blockquote>💡 <strong>الاستنتاج الاستراتيجي:</strong> سعر الوحدة يتحكم في 74% من قرار الشراء، مما يوجّه الشركة نحو استراتيجيات تسعير تنافسية ذكية بدلاً من الاعتماد على الخصومات.</blockquote>
+
+<h4>🏪 أداء الفروع</h4>
+<table>
+    <thead>
+        <tr><th>الفرع</th><th>المبيعات</th><th>النسبة</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>الإسكندرية</td><td>8.63M جنيه</td><td><strong>25.5% 🥇</strong></td></tr>
+        <tr><td>أسيوط</td><td>6.37M جنيه</td><td>18.9%</td></tr>
+        <tr><td>طنطا</td><td>6.02M جنيه</td><td>17.8%</td></tr>
+        <tr><td>الفرع الرئيسي (القاهرة)</td><td>6.0M جنيه</td><td>—</td></tr>
+        <tr><td>المنيا</td><td>4.5M جنيه</td><td>—</td></tr>
+    </tbody>
+</table>
+
+<h4>🛍️ أعلى المنتجات مبيعاً (القيمة)</h4>
+<table>
+    <thead>
+        <tr><th>المنتج</th><th>المبيعات</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>ثلاجة 21 قدم</td><td>3.7M جنيه</td></tr>
+        <tr><td>تلفزيون ذكي 55 بوصة</td><td>3.2M جنيه</td></tr>
+        <tr><td>ثلاجة 18 قدم</td><td>3.1M جنيه</td></tr>
+        <tr><td>مكيف هواء 3 حصان</td><td>2.8M جنيه</td></tr>
+    </tbody>
+</table>
+
+<h4>👥 أداء العملاء</h4>
+<ul>
+    <li><strong>أعلى عميل إيراداً:</strong> عادل أحمد محمد — 1.21 مليون جنيه</li>
+    <li><strong>توزيع العملاء:</strong> شركات 37.5% | تجار 32.5% | أفراد 30%</li>
+    <li><strong>أعلى كثافة طلب جغرافياً:</strong> أسوان (412 طلب)، البحيرة (265)، المنيا (241)</li>
+</ul>
+
+<h4>🧑‍💼 أداء الموظفين</h4>
+<ul>
+    <li><strong>أفضل موظف:</strong> يوسف صالح محمد — 2.47 مليون جنيه مبيعات</li>
+    <li><strong>متوسط الإنجاز مقابل الهدف:</strong> 1,689.80% (تجاوز المستهدف بفارق كبير)</li>
+</ul>
+
+<h3>🔮 التنبؤات المستقبلية 2026 — توقعات المبيعات الشهرية</h3>
+<table>
+    <thead>
+        <tr><th>الشهر</th><th>التوقع (جنيه)</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>يناير</td><td>1,289,056</td></tr>
+        <tr><td>فبراير</td><td>1,448,072</td></tr>
+        <tr><td>مارس (ذروة Q1)</td><td>1,501,221</td></tr>
+        <tr><td>أبريل</td><td>1,514,123</td></tr>
+        <tr><td>مايو</td><td>1,494,743</td></tr>
+        <tr><td>يونيو</td><td>1,483,032</td></tr>
+        <tr><td>يوليو</td><td>1,369,871</td></tr>
+        <tr><td>أغسطس</td><td>1,419,822</td></tr>
+        <tr><td>سبتمبر</td><td>1,381,292</td></tr>
+        <tr><td>أكتوبر</td><td>1,377,080</td></tr>
+        <tr><td>نوفمبر (ذروة Q4)</td><td>1,536,096</td></tr>
+        <tr><td>ديسمبر</td><td>1,589,245</td></tr>
+        <tr><td><strong>الإجمالي</strong></td><td><strong style="color:var(--accent-glow)">17,414,522 جنيه</strong></td></tr>
+    </tbody>
+</table>
+
+<h4>📦 أعلى 10 منتجات متوقع بيعها كمياً في 2026</h4>
+<table>
+    <thead>
+        <tr><th>المنتج</th><th>الكمية المتوقعة</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>مكواة بخار</td><td>211 وحدة</td></tr>
+        <tr><td>تلفزيون ذكي 55 بوصة</td><td>193 وحدة</td></tr>
+        <tr><td>خلاط كهربائي</td><td>183 وحدة</td></tr>
+        <tr><td>مايكروويف 32 لتر</td><td>177 وحدة</td></tr>
+        <tr><td>تلفزيون ذكي 43 بوصة</td><td>164 وحدة</td></tr>
+        <tr><td>ثلاجة 21 قدم</td><td>163 وحدة</td></tr>
+        <tr><td>سخان غاز 10 لتر</td><td>162 وحدة</td></tr>
+        <tr><td>مروحة عامود</td><td>160 وحدة</td></tr>
+        <tr><td>ثلاجة 14 قدم</td><td>157 وحدة</td></tr>
+        <tr><td>سخان كهرباء 50 لتر</td><td>156 وحدة</td></tr>
+    </tbody>
+</table>
+
+<h3>🛠️ التقنيات المستخدمة</h3>
+<table>
+    <thead>
+        <tr><th>التقنية</th><th>الغرض</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>🗄️ MySQL 8.0</td><td>هندسة البيانات واستعلامات SQL المعقدة</td></tr>
+        <tr><td>📊 Power BI</td><td>ذكاء الأعمال واللوحات التفاعلية</td></tr>
+        <tr><td>📐 DAX</td><td>المؤشرات والحسابات (KPIs)</td></tr>
+        <tr><td>🐍 Python 3.10+</td><td>تعلم الآلة والتنبؤ</td></tr>
+        <tr><td>🧮 Pandas</td><td>معالجة البيانات وتحويلها</td></tr>
+        <tr><td>📈 Statsmodels</td><td>السلاسل الزمنية (Holt-Winters)</td></tr>
+        <tr><td>📉 Matplotlib</td><td>التصور البياني للبيانات</td></tr>
+    </tbody>
+</table>
+
+<h3>📌 المهارات التي يبرزها المشروع</h3>
+<table>
+    <thead>
+        <tr><th>المجال</th><th>المهارة</th></tr>
+    </thead>
+    <tbody>
+        <tr><td>📊 ذكاء الأعمال</td><td>Business Intelligence & Dashboarding</td></tr>
+        <tr><td>🔬 علم البيانات</td><td>Data Science & Statistical Modeling</td></tr>
+        <tr><td>🤖 الذكاء الاصطناعي</td><td>AI-driven Insights & Forecasting</td></tr>
+        <tr><td>🗄️ قواعد البيانات</td><td>Database Management & SQL Engineering</td></tr>
+        <tr><td>💰 التحليل المالي</td><td>Financial Forecasting & KPI Design</td></tr>
+        <tr><td>📍 التحليل الجغرافي</td><td>Geospatial Sales Analysis</td></tr>
+        <tr><td>🎯 اتخاذ القرار</td><td>Data-Driven Decision Making</td></tr>
+    </tbody>
+</table>`,
                 tags: ["تحليل بيانات", "Power BI", "Python AI", "SQL", "تنبؤ مبيعات"],
                 client: "شركة مستلزمات منزلية",
                 date: "2026 مارس",

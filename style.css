@@ -1358,3 +1358,202 @@ html[lang="en"] #project-description ul li::before {
     right: auto;
     left: 0;
 }
+
+/* -------------------------------------------------------------
+   9. QUICK STATS SECTION
+------------------------------------------------------------- */
+.quick-stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px 40px;
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(17, 34, 64, 0.2);
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(17, 34, 64, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-glow);
+    background: rgba(23, 42, 69, 0.6);
+    box-shadow: 0 10px 20px -10px rgba(100, 255, 218, 0.15);
+}
+
+.stat-icon {
+    font-size: 1.8em;
+    color: var(--accent-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(100, 255, 218, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-number {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: 0.85em;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Responsive Stats */
+@media (max-width: 768px) {
+    .quick-stats-section {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .quick-stats-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -------------------------------------------------------------
+   10. SKILLS PROGRESS BARS
+------------------------------------------------------------- */
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-item {
+    margin-bottom: 18px;
+}
+
+.skill-item:last-child {
+    margin-bottom: 0;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.skill-name {
+    font-size: 0.95em;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.skill-level {
+    font-size: 0.8em;
+    color: var(--accent-glow);
+    font-family: var(--font-main);
+    opacity: 0.9;
+}
+
+.skill-progress-bar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-progress-fill {
+    height: 100%;
+    background: var(--accent-glow);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(100, 255, 218, 0.3);
+    transition: width 1s ease-out;
+}
+
+/* -------------------------------------------------------------
+   11. COMPACT SKILLS (BADGES)
+------------------------------------------------------------- */
+.compact-skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.compact-skill-badge {
+    background: rgba(100, 255, 218, 0.08);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.compact-skill-badge:hover {
+    background: var(--accent-glow);
+    color: var(--bg-dark-1);
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+    transform: translateY(-2px);
+}
+
+/* -------------------------------------------------------------
+   12. PROJECT CLASSIFICATION BADGES
+------------------------------------------------------------- */
+.project-thumbnail {
+    position: relative;
+}
+
+.project-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: 700;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+html[lang="en"] .project-badge {
+    right: auto;
+    left: 15px;
+}
+
+.badge-analysis {
+    background-color: rgba(100, 255, 218, 0.15);
+    color: #64ffda;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+.badge-web {
+    background-color: rgba(58, 134, 255, 0.15);
+    color: #70a6ff;
+    border: 1px solid rgba(58, 134, 255, 0.3);
+}
+
+.badge-mobile {
+    background-color: rgba(131, 56, 236, 0.15);
+    color: #b588ff;
+    border: 1px solid rgba(131, 56, 236, 0.3);
+}

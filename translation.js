@@ -23,12 +23,13 @@ const translationMap = {
     "أنا": "I am",
     "تواصل معي": "Contact Me",
     "تحميل السيرة الذاتية": "Download CV",
-    "هندسة برمجيات ومحلل بيانات شغوف، أمتلك خبرة في بناء تطبيقات ويب حديثة وتحويل البيانات إلى رؤى قابلة للتنفيذ. أهدف دائمًا لتقديم حلول مبتكرة وعالية الجودة.": "A passionate software engineer and data analyst, I possess experience in building modern web applications and transforming data into actionable insights. I always aim to deliver innovative and high-quality solutions.",
+    "مهندس نظم معلومات متخصص في تحليل البيانات باستخدام Python وPower BI وSQL، ومطور ويب (Vue.js) ومطور تطبيقات مع خبرة عملية في بناء تطبيقات الموبايل والويب. أحوّل البيانات الخام إلى رؤى استراتيجية من خلال لوحات تحكم تفاعلية ونماذج تنبؤية تدعم اتخاذ القرار.": "Information Systems Engineer specialized in data analysis using Python, Power BI, and SQL, and a Web Developer (Vue.js) and App Developer with practical experience in building mobile and web applications. I transform raw data into strategic insights through interactive dashboards and predictive models that support decision-making.",
+    "محلل بيانات | Python · Power BI · SQL | مطور ويب متكامل | مطور تطبيقات جوال": "Data Analyst | Python · Power BI · SQL | Full-Stack Developer | Mobile App Developer",
 
     // Education
     "المؤهل العلمي": "Education Quals",
     "المرحلة الجامعية": "University Education",
-    "المستوى الثالث - نظم معلومات (مستمر)": "Third Level - Information Systems (Ongoing)",
+    "المستوى الرابع - نظم معلومات (مستمر)": "Fourth Level - Information Systems (Ongoing)",
     "طالب جامعي : نظم معلومات - ذكاء اعمال": "University Student: Information Systems - Business Intelligence",
     "المرحلة الثانوية": "High School Education",
     "الثانوية العامة - القسم العلمي": "High School - Science Section",
@@ -51,23 +52,30 @@ const translationMap = {
 
     // Technical Skills
     "المهارات التقنية": "Technical Skills",
-    "لغات البرمجة": "Programming Languages",
-    "تطوير المواقع والتطبيقات": "Web & App Development",
-    "Laravel Framework": "Laravel Framework",
-    "Oracle APEX": "Oracle APEX",
-    "FLutter": "Flutter",
-    "HTML, CSS ,PHP": "HTML, CSS, PHP",
-    "Git, GitHub": "Git, GitHub",
+    "🥇 التخصص الرئيسي — تحليل البيانات": "🥇 Primary Specialization — Data Analysis",
+    "🥈 المهارات الداعمة — تطوير الويب والتطبيقات": "🥈 Supporting Skills — Web & App Development",
+    "🥉 المعرفة التقنية الإضافية": "🥉 Additional Technical Knowledge",
+    "🎨 مهارات التصميم": "🎨 Design Skills",
+    "متقدم": "Advanced",
+    "متوسط متقدم": "Intermediate-Advanced",
+    "متوسط": "Intermediate",
+    "Excel (تحليل متقدم، Pivot Tables)": "Excel (Advanced Analysis, Pivot Tables)",
+    "إعداد التقارير والداشبوردات": "Reporting & Dashboards",
     "استضافة المواقع": "Web Hosting",
-    "قواعد البيانات": "Databases",
-    "تصميم قواعد البيانات": "Database Design",
-    "بناء مستودع بيانات (Data Warehouse)": "Building Data Warehouse",
-    "إعداد التقارير": "Reporting",
-    "مجالات تقنية أخرى": "Other Tech Fields",
-    "الذكاء الاصطناعي": "Artificial Intelligence",
-    "نظم معلومات جغرافية (GIS)": "Geographic Information Systems (GIS)",
-    "إدارة المشاريع": "Project Management",
-    "التسويق الإلكتروني": "Digital Marketing",
+    "الشبكات (CCNA)": "Networking (CCNA)",
+    "الأمن السيبراني": "Cybersecurity",
+    "Canva (شعارات، بطاقات أعمال، سير ذاتية، محتوى تواصل)": "Canva (Logos, Business Cards, Resumes, Social Media Content)",
+
+    // Project Badges
+    "تطوير ويب": "Web Development",
+    "تطبيق موبايل": "Mobile App",
+    "تحليل بيانات": "Data Analysis",
+
+    // Quick Stats
+    "المشاريع المنجزة": "Projects Completed",
+    "سنوات الخبرة": "Years of Experience",
+    "التقنيات المستخدمة": "Technologies Used",
+    "الشهادات": "Certifications",
 
     // Projects Grid & Tags
     "تطبيق قاعات للمناسبات": "Halls Booking App",
@@ -93,7 +101,6 @@ const translationMap = {
     "تطبيق ويب متكامل يُمكّن أي مستخدم — بدون أي خلفية برمجية — من رفع ملفات بياناته والحصول فوراً على تحليل شامل واحترافي ورسوم بيانية تفاعلية وتنظيف ذكي للبيانات.": "A comprehensive web application that enables any user — with no programming background — to upload their data files and instantly get a comprehensive, professional analysis, interactive charts, and smart data cleaning.",
     "تحليل سلة التسوق — Market Basket Analysis": "Market Basket Analysis — Apriori Algorithm",
     "يُحلّل سجلات الشراء الفعلية لسوبرماركت ويكتشف تلقائياً أنماطاً مخفية مثل: \"العملاء الذين يشترون المعكرونة، يشترون أيضاً المياه المعدنية في 34% من الأحيان\".": "Analyzes actual supermarket purchase logs and automatically discovers hidden patterns such as: \"Customers who buy Pasta also buy Mineral Water 34% of the time\".",
-    "تحليل بيانات": "Data Analysis",
     "تنبؤ مبيعات": "Sales Forecasting",
     "الذكاء الاصطناعي": "Artificial Intelligence",
     "تحليل البيانات": "Data Analysis",
@@ -101,7 +108,6 @@ const translationMap = {
     "تشفير": "Encryption",
     "الأمن السيبراني": "Cybersecurity",
     "حماية البيانات": "Data Protection",
-    "تطبيق موبايل": "Mobile App",
     "متجر إلكتروني": "E-Commerce",
     "هواتف ذكية": "Smartphones",
     "واتساب": "WhatsApp",
@@ -140,12 +146,16 @@ const translationMap = {
 
     // Personal Skills
     "المهارات الشخصية": "Personal Skills",
-    "مهارات التواصل": "Communication Skills",
-    "مهارات الاتصال الفعال وإقناع العملاء والتواصل اللفظي والكتابي": "Effective communication, client persuasion, and verbal/written communication",
+    "التواصل الفعّال": "Effective Communication",
+    "القدرة على إيصال الأفكار بوضوح وإقناع الآخرين بفعالية.": "Ability to convey ideas clearly and persuade others effectively.",
     "العمل الجماعي": "Teamwork",
-    "القدرة على العمل بروح الفريق الواحد والتعاون والمبادرة": "Ability to work in a team spirit, cooperate, and take initiative",
-    "التنظيم والتخطيط": "Organization & Planning",
-    "القدرة العالية على التنظيم والتخطيط وإدارة الوقت": "High ability of organization, planning, and time management",
+    "التعاون المثمر مع أعضاء الفريق لتحقيق الأهداف المشتركة.": "Fruitful collaboration with team members to achieve shared goals.",
+    "إدارة الوقت": "Time Management",
+    "تنظيم المهام وتحديد الأولويات لإنجاز المشاريع في مواعيدها.": "Organizing tasks and prioritizing to complete projects on time.",
+    "التفكير التحليلي": "Analytical Thinking",
+    "تفكيك المشكلات المعقدة وفهم البيانات لاستخلاص استنتاجات منطقية.": "Breaking down complex problems and understanding data to draw logical conclusions.",
+    "حل المشكلات": "Problem Solving",
+    "إيجاد حلول مبتكرة وفعّالة للتحديات التقنية والعملية.": "Finding innovative and effective solutions to technical and practical challenges.",
     "المثابرة": "Perseverance",
     "القدرة على العمل لوقت طويل وتحمل أعمال إضافية تحت أي ظرف": "Ability to work long hours and handle extra tasks under any conditions",
     "دعم الآخرين": "Supporting Others",
@@ -154,15 +164,18 @@ const translationMap = {
     // References
     "جميع المراجع متوفرة عند الطلب": "All references are available upon request",
 
-    // Footer & Print
+    // Footer & Print & Miscellaneous
     "البريد الإلكتروني": "Email",
     "الهاتف": "Phone",
     "السيرة الذاتية - عبدالله محمد عبدالرحمن الشريف": "Curriculum Vitae - Abdullah Mohammed Abdulrahman Al-Sharif",
+    "© 2026 عبدالله الشريف - جميع الحقوق محفوظة": "© 2026 Abdullah Al-Sharif - All Rights Reserved",
+    "© 2024 عبدالله الشريف - جميع الحقوق محفوظة": "© 2024 Abdullah Al-Sharif - All Rights Reserved",
     "عبدالله الشريف - جميع الحقوق محفوظة": "Abdullah Al-Sharif - All Rights Reserved",
     "طباعة السيرة الذاتية": "Print CV",
     "مهندس برمجيات": "Software Engineer",
     "محلل بيانات": "Data Analyst",
-    "مدير مشاريع": "Project Manager"
+    "مدير مشاريع": "Project Manager",
+    "إحصائيات سريعة": "Quick Stats"
 };
 
 // Create reverse map automatically
@@ -181,11 +194,11 @@ function translatePage(lang) {
     // Update dynamic typing roles array if present on the page
     if (typeof roles !== 'undefined') {
         if (lang === 'en') {
-            roles[0] = "Software Engineer";
-            roles[1] = "Data Analyst";
+            roles[0] = "Data Analyst";
+            roles[1] = "Full-Stack Developer";
         } else {
-            roles[0] = "مهندس برمجيات";
-            roles[1] = "محلل بيانات";
+            roles[0] = "محلل بيانات";
+            roles[1] = "مطور ويب متكامل";
         }
     }
 
