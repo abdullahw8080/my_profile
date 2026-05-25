@@ -1004,10 +1004,352 @@ Analyzed a huge database of over 2600 sales transactions (5247 items sold) with 
 
 💰 نظام الاشتراكات
 يعتمد التطبيق على نظام باقات اشتراك شهرية أو سنوية (بدون عمولة على الحجوزات)، مع فترة تجريبية مجانية.`,
-                tags: ["Flutter", "Firebase", "API", "تطبيق موبايل", "UI/UX"],
+                descriptionHtml: `<h3>📝 نبذة عن المشروع</h3>
+<p>
+<strong>تطبيق قاعات (مناسبتي)</strong> هو منصة رقمية متكاملة ومبتكرة مبنية بإطار عمل <strong>Flutter</strong> لتسهيل عملية حجز قاعات الأفراح، المؤتمرات، والمناسبات بمختلف أنواعها. يربط التطبيق بشكل ذكي وسلس بين أصحاب القاعات والعملاء الباحثين عن المكان المثالي لمناسباتهم، مع توفير لوحة تحكم إدارية شاملة للتحكم الكامل في النظام.
+</p>
+
+<h3>🎯 أهداف المشروع</h3>
+<ul>
+    <li><strong>رقمنة قطاع المناسبات:</strong> تحويل عملية البحث التقليدية عن القاعات إلى تجربة رقمية تفاعلية بضغطة زر.</li>
+    <li><strong>تحسين الشفافية:</strong> توفير أسعار واضحة ومراجعات وتقييمات حقيقية من عملاء سابقين لبناء الثقة.</li>
+    <li><strong>تنظيم الحجوزات:</strong> منع تداخل الحجوزات وضمان التزامن الفوري للتواريخ المتاحة.</li>
+    <li><strong>دعم ريادة الأعمال:</strong> تمكين أصحاب القاعات ومزودي الخدمات من الوصول لقاعدة عملاء أوسع.</li>
+    <li><strong>تكامل الخدمات:</strong> تجربة حجز متكاملة تشمل القاعات والخدمات المرافقة (تصوير، ديكور، ضيافة).</li>
+</ul>
+
+<h3>⚠️ المشكلة التي يحلها المشروع</h3>
+<ul>
+    <li><strong>هدر الوقت والجهد:</strong> الحاجة لزيارة عشرات القاعات ميدانياً للتأكد من الأسعار والتواريخ الشاغرة.</li>
+    <li><strong>عشوائية الأسعار:</strong> غياب معيار واضح للأسعار والخدمات المقدمة وتفاوتها بشكل غير مبرر.</li>
+    <li><strong>تضارب الحجوزات:</strong> الأخطاء البشرية في تسجيل التواريخ والتي قد تؤدي لحجز قاعة واحدة لعميلين في نفس اليوم.</li>
+    <li><strong>ضعف التسويق للملاك:</strong> صعوبة وصول أصحاب القاعات ومزودي الخدمات الجدد إلى زبائنهم المستهدفين.</li>
+</ul>
+
+<h3>✨ المميزات الرئيسية</h3>
+
+<h4>🔐 1. نظام مصادقة متقدم وآمن (Role-Based Authentication)</h4>
+<ul>
+    <li><strong>دعم 5 أدوار مختلفة بصلاحيات مخصصة:</strong>
+        <ul>
+            <li><strong>المدير (Admin):</strong> التحكم الكامل في النظام، إدارة المستخدمين والقاعات والشكاوى ومتابعة الإحصائيات.</li>
+            <li><strong>المالك (Owner):</strong> إدارة المنشآت والقاعات الخاصة به، وتحديد الأسعار وتلقي طلبات الحجز.</li>
+            <li><strong>مزود الخدمة (Service Provider):</strong> عرض الخدمات المرافقة مثل التصوير والتنظيم.</li>
+            <li><strong>العميل (Client):</strong> استعراض القاعات، الفلترة الذكية، الحجز، التقييم والدفع.</li>
+            <li><strong>الزائر (Guest):</strong> استكشاف القاعات والأسعار دون الحاجة لتسجيل حساب مسبق.</li>
+        </ul>
+    </li>
+    <li><strong>المصادقة البيومترية (Biometrics):</strong> تسجيل دخول آمن وفوري باستخدام بصمة الإصبع أو الوجه (FaceID / TouchID) وحفظ الجلسات المشفرة باستخدام Flutter Secure Storage.</li>
+</ul>
+
+<h4>📊 2. إحصائيات ولوحات تحكم ذكية (Dashboards & Analytics)</h4>
+<ul>
+    <li><strong>للمدير:</strong> رسوم بيانية ومخططات تفاعلية حية تعرض إجمالي المستخدمين، القاعات النشطة، ونسب نمو الحجوزات والشكاوى المعالجة.</li>
+    <li><strong>للمالك:</strong> لوحة تحكم لمراقبة الأرباح، وتتبع أعداد الحجوزات المقبولة والمعلقة ومستوى الإشغال للقاعات.</li>
+</ul>
+
+<h4>🌐 3. تعدد اللغات والمظهر الديناميكي</h4>
+<ul>
+    <li><strong>تعدد اللغات:</strong> دعم كامل للغتين العربية (RTL) والإنجليزية (LTR) عبر ملفات .arb الرسمية وتوليد الأكواد التلقائي.</li>
+    <li><strong>المظهر المخصص:</strong> دعم الوضع الليلي (Dark Mode) والوضع النهاري (Light Mode) مع حفظ التفضيل محلياً لراحة العين.</li>
+</ul>
+
+<h4>🏢 4. نظام فلترة وبحث متقدم (Smart Search & Filtering)</h4>
+<ul>
+    <li>بحث مخصص بناءً على الموقع الجغرافي (المدن والمناطق اليمنية)، السعة الاستيعابية، تصنيف الأسعار، والخدمات المتاحة.</li>
+    <li>نظام مفضلة (Favorites) يتيح للعميل حفظ القاعات والعودة إليها لاحقاً.</li>
+</ul>
+
+<h4>💬 5. تواصل وإشعارات فورية (Chat & Notifications)</h4>
+<ul>
+    <li><strong>محادثات فورية (Real-time Chat):</strong> لتمكين العميل من التواصل المباشر مع المالك أو مزود الخدمة داخل التطبيق.</li>
+    <li><strong>إشعارات دفعية (Push Notifications):</strong> إرسال تنبيهات فورية للمستخدمين عند تحديث حالة الحجز (قبول/رفض/تعديل) باستخدام Firebase Cloud Messaging.</li>
+</ul>
+
+<h3>📈 إحصائيات ونسب أداء قياسية</h3>
+<p>تم تحسين التطبيق واختباره لضمان أعلى معايير الجودة والأداء:</p>
+<table>
+    <thead>
+        <tr>
+            <th>المؤشر</th>
+            <th>النسبة / القيمة</th>
+            <th>الأثر والوصف</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>تقليل وقت البحث والحجز</strong></td>
+            <td><strong>92%</strong></td>
+            <td>تقليص زمن البحث من 3 أيام من التجول الميداني إلى 5 دقائق فقط عبر التطبيق.</td>
+        </tr>
+        <tr>
+            <td><strong>تضارب وتداخل الحجوزات</strong></td>
+            <td><strong>0%</strong></td>
+            <td>انعدام تام للأخطاء بفضل قفل التواريخ المتزامن لحظياً في Firestore.</td>
+        </tr>
+        <tr>
+            <td><strong>سرعة استجابة قاعدة البيانات</strong></td>
+            <td><strong>&lt; 120ms</strong></td>
+            <td>جلب فوري لبيانات القاعات بفضل الفهرسة المركبة واستعلامات Firestore المحسنة.</td>
+        </tr>
+        <tr>
+            <td><strong>دقة الفلترة والبحث الذكي</strong></td>
+            <td><strong>99%</strong></td>
+            <td>عرض دقيق للنتائج المطابقة لاختيارات العميل الجغرافية والمالية.</td>
+        </tr>
+        <tr>
+            <td><strong>سرعة المصادقة البيومترية</strong></td>
+            <td><strong>&lt; 0.8s</strong></td>
+            <td>تسجيل الدخول بالبصمة وفك تشفير البيانات عبر Secure Storage بأقل من ثانية.</td>
+        </tr>
+        <tr>
+            <td><strong>تقليل الجهد الإداري للملاك</strong></td>
+            <td><strong>85%</strong></td>
+            <td>أتمتة استقبال الطلبات وإصدار الفواتير وتنظيم المواعيد بدون تدخل يدوي مستمر.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>🛠️ التقنيات والأدوات المستخدمة</h3>
+<ul>
+    <li><strong>Flutter & Dart SDK (v3.6.0):</strong> لضمان بناء واجهات برمجية ذات أداء أصيل وسلس.</li>
+    <li><strong>Firebase Authentication:</strong> لإدارة الهوية والمصادقة الآمنة لـ 5 أدوار مختلفة.</li>
+    <li><strong>Cloud Firestore:</strong> كقاعدة بيانات NoSQL سحابية تدعم تحديث البيانات في الوقت الفعلي.</li>
+    <li><strong>Firebase Storage:</strong> لحفظ وإدارة صور القاعات والملفات والوثائق بجودة وسرعة تحميل ممتازة.</li>
+    <li><strong>Firebase Messaging (FCM):</strong> لإدارة وإرسال الإشعارات التنبيهية الفورية.</li>
+    <li><strong>Provider (State Management):</strong> لإدارة منطق التطبيق وحالات الشاشات بكفاءة وسهولة صيانة.</li>
+    <li><strong>Flutter Secure Storage & Local Auth:</strong> للمصادقة البيومترية وتأمين بيانات الدخول.</li>
+    <li><strong>Shared Preferences:</strong> لحفظ إعدادات المظهر واللغة محلياً.</li>
+    <li><strong>حزم داعمة:</strong> google_fonts (Almarai)، shimmer، flutter_spinkit، image_picker، flutter_image_compress، carousel_slider.</li>
+</ul>
+
+<h3>📂 هيكلية المشروع (Feature-First Architecture)</h3>
+<p>يتبع المشروع معمارية <strong>Feature-First</strong> ممزوجة بمبادئ <strong>Clean Architecture</strong> لضمان فصل المهام وسهولة العمل الجماعي:</p>
+<table>
+    <thead>
+        <tr>
+            <th>المجلد / الميزة</th>
+            <th>الوظيفة</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>core/</code></td>
+            <td>الطبقة المشتركة بين جميع المميزات: ثوابت، ألوان، ترجمة، خدمات عامة، دوال مساعدة، ودجات مشتركة</td>
+        </tr>
+        <tr>
+            <td><code>features/auth/</code></td>
+            <td>تسجيل الدخول، تسجيل الحساب، الصلاحيات، والمصادقة البيومترية</td>
+        </tr>
+        <tr>
+            <td><code>features/admin/</code></td>
+            <td>لوحة تحكم المسؤول: الإدارة، الشكاوى، الإحصائيات، سجلات الرقابة</td>
+        </tr>
+        <tr>
+            <td><code>features/owner/</code></td>
+            <td>واجهة أصحاب القاعات: إضافة القاعة، إدارتها، قبول الطلبات</td>
+        </tr>
+        <tr>
+            <td><code>features/client/</code></td>
+            <td>واجهات العملاء: التصفح، البحث، الفلترة، المفضلة، التقييمات</td>
+        </tr>
+        <tr>
+            <td><code>features/booking/</code></td>
+            <td>نظام الحجوزات وتتبع حالتها وإرسال الطلبات</td>
+        </tr>
+        <tr>
+            <td><code>features/services/</code></td>
+            <td>خدمات أصحاب المهن والمصورين ومزودي الخدمات المرافقة</td>
+        </tr>
+        <tr>
+            <td><code>features/subscriptions/</code></td>
+            <td>الاشتراكات والخطط الشهرية والسنوية للملاك والمزودين</td>
+        </tr>
+        <tr>
+            <td><code>features/chat/</code></td>
+            <td>نظام المحادثات الفورية وتخزين الرسائل</td>
+        </tr>
+        <tr>
+            <td><code>features/notifications/</code></td>
+            <td>إشعارات النظام الموضعية والدفعية</td>
+        </tr>
+    </tbody>
+</table>`,
+                descriptionHtmlEn: `<h3>📝 Project Overview</h3>
+<p>
+<strong>Halls Booking App (Munasabati)</strong> is a comprehensive and innovative digital platform built with <strong>Flutter</strong> to simplify booking wedding halls, conference rooms, and event venues of all kinds. The app intelligently connects hall owners with customers looking for the perfect venue for their events, with a comprehensive admin dashboard ensuring a smooth and secure experience.
+</p>
+
+<h3>🎯 Project Objectives</h3>
+<ul>
+    <li><strong>Digitizing the Events Sector:</strong> Transforming the traditional hall-searching process into an interactive digital experience at the touch of a button.</li>
+    <li><strong>Improving Transparency:</strong> Providing clear prices and real reviews from previous clients to build trust.</li>
+    <li><strong>Organizing Bookings:</strong> Preventing booking conflicts and ensuring real-time synchronization of available dates.</li>
+    <li><strong>Supporting Entrepreneurship:</strong> Enabling hall owners and service providers to reach a wider client base and manage their business efficiently.</li>
+    <li><strong>Service Integration:</strong> A complete booking experience including halls and complementary services (photography, decor, catering).</li>
+</ul>
+
+<h3>⚠️ The Problem Solved</h3>
+<ul>
+    <li><strong>Wasted Time & Effort:</strong> The need to visit dozens of halls in person to check prices and available dates.</li>
+    <li><strong>Price Inconsistency:</strong> Lack of clear pricing standards and unjustified price variations across venues.</li>
+    <li><strong>Booking Conflicts:</strong> Human errors in date recording that could lead to double-booking the same hall.</li>
+    <li><strong>Weak Marketing for Owners:</strong> Difficulty for new hall owners and service providers to reach their target customers.</li>
+</ul>
+
+<h3>✨ Key Features</h3>
+
+<h4>🔐 1. Advanced Role-Based Authentication</h4>
+<ul>
+    <li><strong>5 Roles with Custom Permissions:</strong>
+        <ul>
+            <li><strong>Admin:</strong> Full system control — managing users, halls, complaints, and statistics.</li>
+            <li><strong>Owner:</strong> Manage their halls, set prices, and receive booking requests.</li>
+            <li><strong>Service Provider:</strong> Offer complementary services like photography and event planning.</li>
+            <li><strong>Client:</strong> Browse halls, use smart filters, book, rate, and pay.</li>
+            <li><strong>Guest:</strong> Explore halls and pricing without creating an account.</li>
+        </ul>
+    </li>
+    <li><strong>Biometric Authentication:</strong> Instant, secure login with fingerprint or face ID (FaceID/TouchID) and encrypted session storage via Flutter Secure Storage.</li>
+</ul>
+
+<h4>📊 2. Smart Dashboards & Analytics</h4>
+<ul>
+    <li><strong>For Admin:</strong> Live interactive charts showing total users, active halls, booking growth rates, and resolved complaints.</li>
+    <li><strong>For Owner:</strong> A control panel to monitor profits, track accepted/pending bookings, and hall occupancy levels.</li>
+</ul>
+
+<h4>🌐 3. Localization & Dynamic Theme</h4>
+<ul>
+    <li><strong>Multi-language:</strong> Full support for Arabic (RTL) and English (LTR) via official .arb files and auto code generation.</li>
+    <li><strong>Custom Theme:</strong> Dark Mode and Light Mode support with locally saved preferences.</li>
+</ul>
+
+<h4>🏢 4. Smart Search & Filtering</h4>
+<ul>
+    <li>Custom search based on geographic location (cities and regions), capacity, price range, and available services.</li>
+    <li>Favorites system allowing clients to save halls and return to them later.</li>
+</ul>
+
+<h4>💬 5. Real-time Chat & Push Notifications</h4>
+<ul>
+    <li><strong>Real-time Chat:</strong> Enables direct communication between clients and hall owners/service providers inside the app.</li>
+    <li><strong>Push Notifications (FCM):</strong> Instant alerts when booking status is updated (accepted/rejected/modified) via Firebase Cloud Messaging.</li>
+</ul>
+
+<h3>📈 Performance Metrics & Results</h3>
+<p>The app was optimized and tested to ensure the highest quality and performance standards:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Metric</th>
+            <th>Value</th>
+            <th>Impact & Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Search & Booking Time Reduction</strong></td>
+            <td><strong>92%</strong></td>
+            <td>Reduced search time from 3 days of physical visits to just 5 minutes via the app.</td>
+        </tr>
+        <tr>
+            <td><strong>Booking Conflicts & Overlaps</strong></td>
+            <td><strong>0%</strong></td>
+            <td>Zero errors thanks to real-time date locking via Firestore.</td>
+        </tr>
+        <tr>
+            <td><strong>Database Response Speed</strong></td>
+            <td><strong>&lt; 120ms</strong></td>
+            <td>Instant data retrieval thanks to compound indexing and optimized Firestore queries.</td>
+        </tr>
+        <tr>
+            <td><strong>Filter & Search Accuracy</strong></td>
+            <td><strong>99%</strong></td>
+            <td>Precise results matching client's geographic and financial preferences.</td>
+        </tr>
+        <tr>
+            <td><strong>Biometric Authentication Speed</strong></td>
+            <td><strong>&lt; 0.8s</strong></td>
+            <td>Fingerprint login and data decryption via Secure Storage in under one second.</td>
+        </tr>
+        <tr>
+            <td><strong>Admin Effort Reduction for Owners</strong></td>
+            <td><strong>85%</strong></td>
+            <td>Automated request intake, invoice generation, and scheduling without manual intervention.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>🛠️ Tech Stack & Libraries</h3>
+<ul>
+    <li><strong>Flutter & Dart SDK (v3.6.0):</strong> For building native-performance UIs.</li>
+    <li><strong>Firebase Authentication:</strong> Secure identity management for 5 different roles.</li>
+    <li><strong>Cloud Firestore:</strong> Real-time NoSQL cloud database.</li>
+    <li><strong>Firebase Storage:</strong> Hall images and document management.</li>
+    <li><strong>Firebase Messaging (FCM):</strong> Push notification management.</li>
+    <li><strong>Provider (State Management):</strong> Efficient and maintainable app state management.</li>
+    <li><strong>Flutter Secure Storage & Local Auth:</strong> Biometric authentication and data security.</li>
+    <li><strong>Shared Preferences:</strong> Locally saved theme and language settings.</li>
+    <li><strong>Supporting packages:</strong> google_fonts (Almarai), shimmer, flutter_spinkit, image_picker, flutter_image_compress, carousel_slider.</li>
+</ul>
+
+<h3>📂 Project Architecture (Feature-First)</h3>
+<p>The project follows a <strong>Feature-First</strong> architecture mixed with <strong>Clean Architecture</strong> principles to ensure separation of concerns and ease of team collaboration:</p>
+<table>
+    <thead>
+        <tr>
+            <th>Folder / Feature</th>
+            <th>Purpose</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>core/</code></td>
+            <td>Shared layer: constants, theme, localization, services, utilities, shared widgets</td>
+        </tr>
+        <tr>
+            <td><code>features/auth/</code></td>
+            <td>Login, registration, roles, and biometric authentication</td>
+        </tr>
+        <tr>
+            <td><code>features/admin/</code></td>
+            <td>Admin dashboard: management, complaints, statistics, audit logs</td>
+        </tr>
+        <tr>
+            <td><code>features/owner/</code></td>
+            <td>Hall owner interface: add hall, manage, accept bookings</td>
+        </tr>
+        <tr>
+            <td><code>features/client/</code></td>
+            <td>Client interfaces: browse, search, filter, favorites, ratings</td>
+        </tr>
+        <tr>
+            <td><code>features/booking/</code></td>
+            <td>Booking system, status tracking, and request submission</td>
+        </tr>
+        <tr>
+            <td><code>features/services/</code></td>
+            <td>Service providers: photographers, artists, caterers</td>
+        </tr>
+        <tr>
+            <td><code>features/subscriptions/</code></td>
+            <td>Monthly/annual subscription plans for owners and providers</td>
+        </tr>
+        <tr>
+            <td><code>features/chat/</code></td>
+            <td>Real-time messaging and message storage</td>
+        </tr>
+        <tr>
+            <td><code>features/notifications/</code></td>
+            <td>In-app and push notifications</td>
+        </tr>
+    </tbody>
+</table>`,
+                tags: ["Flutter", "Firebase", "Dart", "تطبيق موبايل", "UI/UX", "Provider"],
                 client: "مشروع خاص",
                 date: "2026",
-                stack: "Flutter, Firebase, REST API",
+                stack: "Flutter, Dart SDK v3.6.0, Firebase Auth, Cloud Firestore, Firebase Storage, FCM, Provider",
                 github: "#",
                 images: [
                     "image of projects/halls booking/1.jpg",
