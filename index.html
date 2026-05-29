@@ -48,7 +48,7 @@
 
     <div class="container">
         <!-- Header -->
-        <header class="header" id="contact">
+        <header class="header" id="objective">
             <div class="header-content">
                 <!-- Right Side: Text -->
                 <div class="hero-text-content">
@@ -60,7 +60,7 @@
                     </div>
 
                     <div class="hero-socials">
-                        <a href="https://github.com/dashboard" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://github.com/abdullahw8080" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/abdullah-al-sharif-888239320/" target="_blank"><i
                                 class="fab fa-linkedin-in"></i></a>
                         <a href="https://wa.me/716415103" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -348,10 +348,18 @@
                 <i class="fas fa-laptop-code"></i>
                 <h2>المشاريع</h2>
             </div>
+                        <!-- Project Filters -->
+            <div class="project-filters" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--accent-glow); background: var(--accent-glow); color: var(--bg-dark-1); cursor: pointer; transition: all 0.3s; font-weight: bold;">الكل</button>
+                <button class="filter-btn" data-filter="analysis" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--accent-glow); background: transparent; color: var(--text-primary); cursor: pointer; transition: all 0.3s; font-weight: bold;">تحليل بيانات</button>
+                <button class="filter-btn" data-filter="web" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--accent-glow); background: transparent; color: var(--text-primary); cursor: pointer; transition: all 0.3s; font-weight: bold;">تطوير ويب</button>
+                <button class="filter-btn" data-filter="mobile" style="padding: 8px 20px; border-radius: 20px; border: 1px solid var(--accent-glow); background: transparent; color: var(--text-primary); cursor: pointer; transition: all 0.3s; font-weight: bold;">تطبيق موبايل</button>
+            </div>
+
             <div class="projects-grid">
 
                  <!-- Project 7: Household Supplies (تحليل بيانات) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=7'">
+                 <div class="project-card" data-category="analysis" onclick="window.location.href='project-details.html?id=7'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-analysis">تحليل بيانات</span>
                          <img src="image of projects/Household Appliances Sales Analysis images/3.png"
@@ -372,7 +380,7 @@
                  </div>
 
                  <!-- Project 4: Data Warehouse (تحليل بيانات) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=4'">
+                 <div class="project-card" data-category="analysis" onclick="window.location.href='project-details.html?id=4'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-analysis">تحليل بيانات</span>
                          <img src="image of projects\Data Warehouse Projct Images\1.png" alt="Data Analytics Platform"
@@ -391,7 +399,7 @@
                  </div>
 
                  <!-- Project 11: Market Basket Analysis (تحليل بيانات) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=11'">
+                 <div class="project-card" data-category="analysis" onclick="window.location.href='project-details.html?id=11'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-analysis">تحليل بيانات</span>
                          <img src="image of projects/Market Basket Analysis Apriori images/1.jpg" alt="Market Basket Analysis" loading="lazy"
@@ -407,7 +415,7 @@
                  </div>
 
                  <!-- Project 10: Data Intelligence Dashboard (تحليل بيانات) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=10'">
+                 <div class="project-card" data-category="analysis" onclick="window.location.href='project-details.html?id=10'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-analysis">تحليل بيانات</span>
                          <img src="image of projects/Data intelligents Dashboard images/1.png" alt="Data Intelligence Dashboard" loading="lazy"
@@ -423,7 +431,7 @@
                  </div>
 
                  <!-- Project 3: E-Commerce Data Analysis (تحليل بيانات) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=3'">
+                 <div class="project-card" data-category="analysis" onclick="window.location.href='project-details.html?id=3'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-analysis">تحليل بيانات</span>
                          <img src="image of projects\E-Commerce Power BI Dashboard Image\1.png" alt="E-Commerce App"
@@ -441,7 +449,7 @@
                  </div>
 
                  <!-- Project 1: Loan Prediction Model Building (تحليل بيانات) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=1'">
+                 <div class="project-card" data-category="analysis" onclick="window.location.href='project-details.html?id=1'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-analysis">تحليل بيانات</span>
                          <img src="image of projects\صور مشروع التنبؤ بالقروض\8.png" alt="ERP System" loading="lazy"
@@ -460,7 +468,7 @@
                  </div>
 
                  <!-- Project 5: Optimal Health Centers (تحليل بيانات) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=5'">
+                 <div class="project-card" data-category="analysis" onclick="window.location.href='project-details.html?id=5'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-analysis">تحليل بيانات</span>
                          <img src="image of projects/GIS_health_servces_project/health servces.png" alt="health servces"
@@ -480,7 +488,7 @@
                  </div>
 
                  <!-- Project 9: Halls Booking (تطبيق موبايل) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=9'">
+                 <div class="project-card" data-category="mobile" onclick="window.location.href='project-details.html?id=9'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-mobile">تطبيق موبايل</span>
                          <img src="image of projects/halls booking/1.jpg" alt="Halls Booking App" loading="lazy"
@@ -498,7 +506,7 @@
                  </div>
 
                  <!-- Project 2: E-Commerce Website (سلة الخير) (تطوير ويب) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=2'">
+                 <div class="project-card" data-category="web" onclick="window.location.href='project-details.html?id=2'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-web">تطوير ويب</span>
                          <img src="image of projects\صور متجر سلة الخير\22.png" alt="E-Commerce App" loading="lazy"
@@ -514,7 +522,7 @@
                  </div>
 
                  <!-- Project 6: Taif Store (تطوير ويب) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=6'">
+                 <div class="project-card" data-category="web" onclick="window.location.href='project-details.html?id=6'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-web">تطوير ويب</span>
                          <img src="image of projects/صورة متجر طيف/4.png" alt="متجر طيف الإلكتروني للهواتف"
@@ -535,7 +543,7 @@
                  </div>
 
                  <!-- Project 8: Hybrid Encryption (تطوير ويب) -->
-                 <div class="project-card" onclick="window.location.href='project-details.html?id=8'">
+                 <div class="project-card" data-category="web" onclick="window.location.href='project-details.html?id=8'">
                      <div class="project-thumbnail">
                          <span class="project-badge badge-web">تطوير ويب</span>
                          <img src="image of projects/Advanced File Encryption Project images/5.png"
@@ -634,6 +642,31 @@
             </div>
         </section>
 
+        <!-- Contact Section -->
+        <section class="section" id="contact" data-aos="fade-up">
+            <div class="section-title">
+                <i class="fas fa-envelope"></i>
+                <h2>تواصل معي</h2>
+            </div>
+            <div class="contact-form-container" style="max-width: 600px; margin: 0 auto; background: rgba(17, 34, 64, 0.5); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);">
+                <form action="mailto:abdullahw8080@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="name" style="display: block; margin-bottom: 8px; color: var(--text-primary);">الاسم</label>
+                        <input type="text" id="name" name="name" required placeholder="أدخل اسمك" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--glass-border); background: rgba(10, 25, 47, 0.7); color: var(--text-primary); font-family: var(--font-main);">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="email" style="display: block; margin-bottom: 8px; color: var(--text-primary);">البريد الإلكتروني</label>
+                        <input type="email" id="email" name="email" required placeholder="أدخل بريدك الإلكتروني" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--glass-border); background: rgba(10, 25, 47, 0.7); color: var(--text-primary); font-family: var(--font-main);">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="message" style="display: block; margin-bottom: 8px; color: var(--text-primary);">الرسالة</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="اكتب رسالتك هنا" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--glass-border); background: rgba(10, 25, 47, 0.7); color: var(--text-primary); font-family: var(--font-main); resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="hero-btn btn-primary" style="width: 100%; border: none; cursor: pointer; padding: 15px; font-size: 1.1em;">إرسال الرسالة</button>
+                </form>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="footer">
             <p>السيرة الذاتية - عبدالله محمد عبدالرحمن الشريف</p>
@@ -644,7 +677,7 @@
                 <a href="https://wa.me/716415103" title="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://www.linkedin.com/in/abdullah-al-sharif-888239320/" title="LinkedIn" target="_blank"><i
                         class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/dashboard" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://github.com/abdullahw8080" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.facebook.com/share/1CqsFnNsX8/" title="Facebook" target="_blank"><i
                         class="fab fa-facebook-f"></i></a>
             </div>
@@ -670,7 +703,7 @@
 
         // Copy Email
         function copyEmail() {
-            const email = "msyahmed600@gmail.com";
+            const email = "abdullahw8080@gmail.com";
 
             // Try to open email client
             window.location.href = 'mailto:' + email;
@@ -681,6 +714,46 @@
                     // Optional: tooltip or visual feedback can be added here
                 });
             }
+        }
+
+                // Project Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        if (filterBtns.length > 0 && projectCards.length > 0) {
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all
+                    filterBtns.forEach(b => {
+                        b.style.background = 'transparent';
+                        b.style.color = 'var(--text-primary)';
+                        b.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked
+                    btn.style.background = 'var(--accent-glow)';
+                    btn.style.color = 'var(--bg-dark-1)';
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    projectCards.forEach(card => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'scale(0.8)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
         }
 
         // Mobile Menu Toggle
